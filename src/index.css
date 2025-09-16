@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+/* 
+    Reset CSS & Variáveis Globais
+    Usando um reset leve para normalizar os padrões do navegador.
+*/
+:root {
+  /* Cores do tema claro */
+  --color-background-light: #f8f9fa; /* Cinza muito claro/quase branco */
+  --color-text-primary: #4a5568; /* Cinza mais escuro para texto geral */
+  --color-text-secondary: #718096; /* Cinza mais claro para elementos sutis */
+  --color-border: #dde4e9; /* Linhas de borda claras */
+  --color-illustration-bg: #ebf0f5; /* Cor de fundo dentro dos elementos da ilustração */
+  --color-tagline-text: #36404f; /* Ligeiramente mais escuro para o slogan principal */
+
+  /* Cores do tema Drácula (dark mode) */
+  --color-background-dark: #282a36; /* Fundo principal escuro */
+  --color-background-secondary-dark: #44475a; /* Fundo secundário */
+  --color-text-primary-dark: #f8f8f2; /* Texto principal claro */
+  --color-text-secondary-dark: #bd93f9; /* Texto secundário roxo */
+  --color-border-dark: #6272a4; /* Bordas azuladas */
+  --color-accent-dark: #ff79c6; /* Destaque rosa */
+  --color-illustration-bg-dark: #44475a; /* Fundo da ilustração escuro */
+
+  /* Tipografia */
+  --font-family-primary: "Inter", sans-serif;
+  --font-size-base: 16px;
+
+  /* Espaçamento */
+  --header-height: 60px;
+  --spacing-lg: 40px;
+  --spacing-md: 20px;
+  --spacing-sm: 10px;
+}
+
+/* Tema escuro */
+[data-theme="dark"] {
+  --color-background-light: var(--color-background-dark);
+  --color-text-primary: var(--color-text-primary-dark);
+  --color-text-secondary: var(--color-text-secondary-dark);
+  --color-border: var(--color-border-dark);
+  --color-illustration-bg: var(--color-illustration-bg-dark);
+  --color-tagline-text: var(--color-text-primary-dark);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%; /* Garante que o corpo se estenda por toda a altura da viewport */
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-background-light);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+
+  /* Textura de fundo sutil (como papel ou tela) */
+  background-image: linear-gradient(
+      to bottom,
+      transparent 1px,
+      rgba(0, 0, 0, 0.02) 1px,
+      rgba(0, 0, 0, 0.02) 2px,
+      transparent 2px
+    ),
+    linear-gradient(
+      to right,
+      transparent 1px,
+      rgba(0, 0, 0, 0.02) 1px,
+      rgba(0, 0, 0, 0.02) 2px,
+      transparent 2px
+    );
+  background-size: 5px 5px; /* Ajuste para o tamanho desejado do grão/ponto */
+  background-attachment: fixed; /* Mantém a textura estável ao rolar */
+}
+
+a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(
+    --color-tagline-text
+  ); /* Ligeiramente mais escuro ao passar o mouse */
+}
+
+/* 
+    Estilos do Cabeçalho
+*/
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-lg);
+  height: var(--header-height);
+  border-bottom: 1.5px solid rgba(74, 85, 104, 0.8); /* Mesma cor e opacidade, mas mais fina */
+  flex-shrink: 0; /* Impede que o cabeçalho encolha em telas pequenas */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Fundo do header no tema claro */
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Header no dark mode */
+[data-theme="dark"] .site-header {
+  background-color: rgba(40, 42, 54, 0.95); /* Fundo do header no tema escuro */
+  border-bottom-color: rgba(
+    98,
+    114,
+    164,
+    0.8
+  ); /* Borda azulada no tema escuro */
+}
+
+/* Logo no dark mode */
+[data-theme="dark"] .site-logo {
+  color: var(--color-text-primary-dark);
+}
+
+/* Navegação no dark mode */
+[data-theme="dark"] .main-nav a {
+  color: var(--color-text-secondary-dark);
+}
+
+[data-theme="dark"] .main-nav a:hover {
+  color: var(--color-accent-dark);
+}
+
+/* Botão de tema no dark mode */
+[data-theme="dark"] .mode-toggle {
+  color: var(--color-text-primary-dark);
+}
+
+[data-theme="dark"] .mode-toggle:hover {
+  background-color: rgba(98, 114, 164, 0.1);
+}
+
+/* Ícones no dark mode */
+[data-theme="dark"] .icon-box {
+  background-color: var(--color-background-secondary-dark);
+  border-color: var(--color-border-dark);
+  color: var(--color-text-primary-dark);
+}
+
+[data-theme="dark"] .icon-box:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: var(--color-background-dark);
+}
+
+.site-logo {
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 6rem; /* Aumentado o espaçamento entre as opções */
+  justify-content: center; /* Centraliza as opções */
+  align-items: center;
+}
+
+.main-nav li {
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.main-nav a:hover {
+  color: var(--color-text-secondary);
+  background-color: rgba(74, 85, 104, 0.1);
+}
+
+/* Efeito de sublinhado para os itens de navegação */
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor; /* Corresponde à cor atual do link */
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.mode-toggle {
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-primary);
+  font-size: 0.95em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.mode-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.mode-toggle .icon {
+  font-size: 1.2em; /* Para ícones de emoji */
+}
+
+.header-icons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.icon-box {
+  width: 32px; /* Tamanho fixo para ícones */
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: #fff; /* Fundo branco para a caixa do ícone */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  font-size: 1.2em; /* Para ícones de emoji */
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+}
+
+.icon-box:hover {
+  transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* 
+    Estilos da Seção Hero
+*/
+.hero-section {
+  flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço vertical restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  padding: var(--spacing-lg) var(--spacing-md); /* Preenchimento vertical e horizontal */
+  text-align: center;
+  overflow: hidden; /* Controla o overflow das linhas que se estendem por toda a tela */
+}
+
+.illustration-wrapper {
+  max-width: 600px; /* Voltando para o tamanho anterior */
+  width: 100%;
+  margin-bottom: 15px; /* Margem de baixo reduzida para menos opacidade */
+  position: relative; /* Para posicionar as linhas que se estendem */
+
+  /* A imagem em si pode ter preenchimento/bordas internas, 
+       mas este wrapper a centraliza e controla seu tamanho geral. */
+
+  /* Fundo para a imagem placeholder para combinar com os espaços vazios da ilustração */
+  background-color: var(--color-illustration-bg);
+  border: 2px solid rgba(221, 228, 233, 0.1); /* Borda muito mais sutil */
+  border-radius: 8px; /* Cantos ligeiramente arredondados */
+  overflow: visible; /* Permite que as linhas se estendam além dos limites */
+}
+
+/* Linhas horizontais que se estendem da mesa para o resto da tela */
+.illustration-wrapper::before {
+  content: "";
+  position: absolute;
+  top: calc(82% - 42.5px); /* Voltando para a posição anterior */
+  left: -100vw; /* Se estende por toda a largura da tela */
+  width: 100vw; /* Ocupa toda a largura da viewport */
+  height: 1.5px; /* Aumentado para 1.5px (meio pixel mais grosso) */
+  background-color: var(--color-text-primary);
+  opacity: 0.8; /* Aumentado para 0.8 (mais escuro) */
+  z-index: -1;
+}
+
+.illustration-wrapper::after {
+  content: "";
+  position: absolute;
+  top: calc(82% - 42.5px); /* Voltando para a posição anterior */
+  right: -100vw; /* Se estende por toda a largura da tela */
+  width: 100vw; /* Ocupa toda a largura da viewport */
+  height: 1.5px; /* Aumentado para 1.5px (meio pixel mais grosso) */
+  background-color: var(--color-text-primary);
+  opacity: 0.8; /* Aumentado para 0.8 (mais escuro) */
+  z-index: -1;
+}
+
+.main-illustration-placeholder {
+  max-width: 100%; /* Garante que a imagem seja responsiva */
+  height: auto;
+  display: block; /* Remove espaço extra abaixo da imagem */
+  transition: filter 0.3s ease; /* Transição suave para os filtros */
+}
+
+/* Filtros para dark mode na imagem */
+[data-theme="dark"] .main-illustration-placeholder {
+  filter: brightness(0.7) contrast(1.1) saturate(0.9); /* Mais escura, aumenta contraste e reduz saturação */
+}
+
+/* Para uma ilustração SVG real, você direcionaria o SVG diretamente: */
+/* .main-illustration {
+    width: 100%;
+    height: auto;
+    display: block;
+} */
+
+.hero-tagline {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-tagline-text);
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+  position: relative; /* Para permitir sobreposição */
+  z-index: 1; /* Para ficar acima das linhas estendidas */
+  margin-top: -37px; /* Movido mais 2px para cima */
+}
+
+/* 
+    Ajustes Responsivos
+*/
+@media (max-width: 900px) {
+  .site-header {
+    padding: 0 var(--spacing-md);
+  }
+  .main-nav ul {
+    gap: var(--spacing-md);
+  }
+  .hero-tagline {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    height: auto; /* Permite que a altura do cabeçalho se ajuste */
+    padding: var(--spacing-md) var(--spacing-sm);
+    gap: var(--spacing-md);
+  }
+
+  .header-left,
+  .main-nav,
+  .header-right {
+    width: 100%;
+    text-align: center;
+    justify-content: center; /* Centraliza os itens dentro de seus contêineres flex */
+  }
+
+  .main-nav ul {
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  .hero-tagline {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-logo {
+    font-size: 1em;
+  }
+  .main-nav ul {
+    flex-direction: column; /* Empilha os itens de navegação verticalmente */
+    gap: var(--spacing-sm);
+  }
+  .hero-tagline {
+    font-size: 1.2em;
+  }
+  .header-icons .icon-box {
+    width: 28px;
+    height: 28px;
+  }
+}
