@@ -1,0 +1,365 @@
+/* src/pages/HabilidadesFerramentas/HabilidadesFerramentas.css */
+
+.habilidades-ferramentas-container {
+  max-width: 1200px; /* Aumentado para acomodar 4 colunas confortavelmente */
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  transition: color 0.3s ease;
+  font-family: var(--font-family-primary);
+}
+
+[data-theme="dark"] .habilidades-ferramentas-container {
+  color: var(--color-text-primary-dark);
+}
+
+.habilidades-ferramentas-section {
+  margin-bottom: 40px;
+}
+
+.habilidades-ferramentas-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--color-tagline-text);
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+[data-theme="dark"] .habilidades-ferramentas-title {
+  color: var(--color-text-primary-dark);
+}
+
+.habilidades-ferramentas-subtitle {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  color: var(--color-text-primary);
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+[data-theme="dark"] .habilidades-ferramentas-subtitle {
+  color: var(--color-text-primary-dark);
+}
+
+.habilidades-ferramentas-intro {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid para Habilidades Técnicas */
+.skills-grid {
+  display: grid;
+  /* Alterado para 4 colunas em telas grandes, com minmax para flexibilidade */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.skill-category {
+  background-color: var(--color-illustration-bg); /* Fundo sutil */
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .skill-category {
+  background-color: var(--color-background-secondary-dark);
+  border-color: var(--color-border-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .skill-category:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.skill-category h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--color-tagline-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+[data-theme="dark"] .skill-category h3 {
+  color: var(--color-text-primary-dark);
+}
+
+.skill-category h3 .fas,
+.skill-category h3 .fa-brands,
+.skill-category h3 .fa-solid {
+  font-size: 1.6rem;
+  color: var(--color-text-secondary); /* Cor do ícone */
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .skill-category h3 .fas,
+[data-theme="dark"] .skill-category h3 .fa-brands,
+[data-theme="dark"] .skill-category h3 .fa-solid {
+  color: var(--color-accent-dark); /* Cor do ícone no dark mode */
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Ajustes para cada item da lista de habilidades */
+.skill-category li {
+  display: flex; /* Mantém o ícone ao lado do bloco de texto */
+  align-items: flex-start; /* Alinha o ícone com o topo do texto */
+  margin-bottom: 20px; /* Mais espaço entre as habilidades */
+  color: var(--color-text-primary); /* Cor padrão do texto */
+}
+
+[data-theme="dark"] .skill-category li {
+  color: var(--color-text-primary-dark);
+}
+
+.skill-category li:last-child {
+  margin-bottom: 0; /* Remove margem do último item */
+}
+
+.skill-category li i {
+  /* Estilo para o ícone da habilidade */
+  font-size: 1.2rem;
+  margin-right: 15px; /* Mais espaço entre o ícone e o texto */
+  margin-top: 4px;
+  color: var(--color-text-secondary); /* Cor do ícone da skill */
+  flex-shrink: 0; /* Impede que o ícone encolha */
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .skill-category li i {
+  color: var(
+    --color-text-secondary-dark
+  ); /* Cor do ícone da skill no dark mode */
+}
+
+.skill-category li div {
+  /* Novo wrapper para o nome e descrição */
+  display: flex;
+  flex-direction: column; /* Coloca nome e descrição um abaixo do outro */
+  flex-grow: 1; /* Permite que o div ocupe o espaço restante */
+}
+
+.skill-category li strong {
+  /* Estilo para o nome da tecnologia */
+  font-size: 1.05rem; /* Levemente maior que a descrição */
+  font-weight: 600;
+  margin-bottom: 4px; /* Espaço entre o nome e a descrição */
+  color: var(--color-tagline-text); /* Destaca o nome */
+}
+
+[data-theme="dark"] .skill-category li strong {
+  color: var(--color-text-primary-dark);
+}
+
+.skill-category li p {
+  /* Estilo para a descrição */
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4; /* Ajusta a altura da linha para a descrição */
+}
+
+[data-theme="dark"] .skill-category li p {
+  color: var(--color-text-secondary-dark);
+}
+
+/* Grid para Soft Skills */
+.soft-skills-grid {
+  display: grid;
+  /* Alterado para 4 colunas em telas grandes */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.soft-skill-item {
+  background-color: var(--color-illustration-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .soft-skill-item {
+  background-color: var(--color-background-secondary-dark);
+  border-color: var(--color-border-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.soft-skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+}
+
+[data-theme="dark"] .soft-skill-item:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.soft-skill-item .fas,
+.soft-skill-item .fa-solid {
+  font-size: 2.5rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .soft-skill-item .fas,
+[data-theme="dark"] .soft-skill-item .fa-solid {
+  color: var(--color-accent-dark);
+}
+
+.soft-skill-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--color-tagline-text);
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .soft-skill-item h4 {
+  color: var(--color-text-primary-dark);
+}
+
+.soft-skill-item p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+[data-theme="dark"] .soft-skill-item p {
+  color: var(--color-text-secondary-dark);
+}
+
+/* Lista de Cursos */
+.courses-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.courses-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .courses-list li {
+  color: var(--color-text-primary-dark);
+}
+
+.courses-list li .fas,
+.courses-list li .fa-solid {
+  font-size: 1.1rem;
+  margin-right: 10px;
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .courses-list li .fas,
+[data-theme="dark"] .courses-list li .fa-solid {
+  color: var(--color-accent-dark);
+}
+
+.skill-category li .skill-img-icon {
+  width: 1.2rem; /* Ajuste o tamanho conforme necessário */
+  height: 1.2rem;
+  margin-right: 15px;
+  margin-top: 4px;
+  /* A cor do SVG é definida no próprio arquivo SVG, não pode ser alterada facilmente com 'fill' */
+  /* Se precisar mudar a cor, terá que editar o SVG ou usar a Opção A */
+  flex-shrink: 0;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  /* Ajuste para telas um pouco menores que o max-width do container */
+  .skills-grid,
+  .soft-skills-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Volta para 3 ou 2 colunas se necessário */
+  }
+}
+
+@media (max-width: 768px) {
+  .habilidades-ferramentas-container {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  .habilidades-ferramentas-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+  .habilidades-ferramentas-subtitle {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+  }
+  .habilidades-ferramentas-intro {
+    font-size: 1rem;
+  }
+  .skills-grid,
+  .soft-skills-grid,
+  .courses-list {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    ); /* 2 colunas em tablets */
+  }
+  .skill-category,
+  .soft-skill-item {
+    padding: 20px;
+  }
+  .skill-category h3 {
+    font-size: 1.3rem;
+  }
+  .soft-skill-item h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .habilidades-ferramentas-container {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+  .habilidades-ferramentas-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  .habilidades-ferramentas-subtitle {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+  .habilidades-ferramentas-intro {
+    font-size: 1rem;
+  }
+  .skills-grid,
+  .soft-skills-grid,
+  .courses-list {
+    grid-template-columns: 1fr; /* 1 coluna em celulares */
+  }
+}
