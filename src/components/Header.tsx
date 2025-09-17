@@ -15,16 +15,16 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleMode }) => {
       <nav className="main-nav">
         <ul>
           <li>
-            <Link to="/sobre-mim">Sobre mim</Link>
-          </li>
-          <li>
             <a href="#">Projetos</a>
           </li>
           <li>
-            <a href="#">Trajetória</a>
+            <a href="#">Habilidades e Ferramentas</a>
           </li>
           <li>
-            <a href="#">Habilidades e Ferramentas</a>
+            <Link to="/trajetoria">Trajetória</Link>
+          </li>
+          <li>
+            <Link to="/sobre-mim">Sobre mim</Link>
           </li>
           <li>
             <a href="#">Contato</a>
