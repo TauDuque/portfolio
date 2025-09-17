@@ -1,0 +1,109 @@
+/* src/pages/Trajetoria/Trajetoria.css */
+
+.trajetoria-container {
+  max-width: 900px; /* Largura máxima para o conteúdo, similar a outros elementos */
+  margin: 40px auto; /* Centraliza o conteúdo com margem superior/inferior */
+  padding: 0 20px; /* Espaçamento lateral para telas menores */
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+  color: var(
+    --color-text-primary
+  ); /* Usa a variável CSS global para a cor do texto no tema claro */
+  transition: color 0.3s ease; /* Transição suave para a mudança de tema */
+  font-family: var(--font-family-primary); /* Garante a fonte principal */
+}
+
+/* Ajustes para o modo escuro */
+[data-theme="dark"] .trajetoria-container {
+  color: var(--color-text-primary-dark); /* Cor do texto no tema escuro */
+}
+
+.trajetoria-section {
+  margin-bottom: 30px; /* Espaçamento entre as seções */
+}
+
+.trajetoria-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem); /* Tamanho de fonte responsivo */
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--color-tagline-text); /* Usa a cor da tagline para consistência */
+  transition: color 0.3s ease;
+  text-align: center; /* Centraliza o título principal */
+}
+
+[data-theme="dark"] .trajetoria-title {
+  color: var(
+    --color-text-primary-dark
+  ); /* Ajusta a cor do título no modo escuro */
+}
+
+.trajetoria-subtitle {
+  font-size: clamp(1.4rem, 3vw, 2.2rem); /* Tamanho de fonte responsivo */
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--color-text-primary);
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .trajetoria-subtitle {
+  color: var(--color-text-primary-dark);
+}
+
+.trajetoria-intro {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.trajetoria-list {
+  list-style: disc; /* Marcadores de lista padrão */
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.trajetoria-list li {
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.trajetoria-sublist {
+  list-style: circle; /* Marcadores de lista para sub-itens */
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.trajetoria-sublist li {
+  margin-bottom: 5px;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+  .trajetoria-container {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  .trajetoria-title {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+  }
+  .trajetoria-subtitle {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+  .trajetoria-intro {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trajetoria-container {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+  .trajetoria-title {
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
+  }
+  .trajetoria-subtitle {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+  }
+  .trajetoria-list {
+    margin-left: 15px;
+  }
+}
