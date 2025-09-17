@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleMode }) => {
             <a href="#">Projetos</a>
           </li>
           <li>
-            <a href="#">Habilidades e Ferramentas</a>
+            <Link to="/habilidades-ferramentas">Habilidades</Link>
           </li>
           <li>
             <Link to="/trajetoria">Trajetória</Link>

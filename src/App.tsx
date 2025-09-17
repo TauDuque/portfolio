@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import SobreMim from "./pages/SobreMim"; // Importa o componente SobreMim
 import "./App.css";
 import Trajetoria from "./pages/Trajetoria";
+import HabilidadesFerramentas from "./pages/HabilidadesFerramentas";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -47,6 +48,10 @@ function App() {
         {/* <<< AQUI ESTÁ A DEFINIÇÃO DA ROTA PARA A PÁGINA "SOBRE MIM" */}
         <Route path="/sobre-mim" element={<SobreMim />} />
         <Route path="/trajetoria" element={<Trajetoria />} />
+        <Route
+          path="/habilidades-ferramentas"
+          element={<HabilidadesFerramentas isDarkMode={isDarkMode} />}
+        />
         {/* <Route path="/projetos" element={<Projetos />} /> */}
       </Routes>
     </>
