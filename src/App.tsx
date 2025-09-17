@@ -1,5 +1,8 @@
+// src/App.tsx
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import SobreMim from "./pages/SobreMim"; // Importa o componente SobreMim
 import "./App.css";
 
 function App() {
@@ -9,7 +12,6 @@ function App() {
     setIsDarkMode(!isDarkMode);
   };
 
-  // Aplicar o tema ao documento quando o estado mudar
   useEffect(() => {
     document.documentElement.setAttribute(
       "data-theme",
@@ -19,20 +21,33 @@ function App() {
 
   return (
     <>
-      {/* Usamos o componente Header aqui, passando as props necessárias */}
+      {" "}
+      {/* Fragmento para agrupar o Header e as Routes */}
       <Header isDarkMode={isDarkMode} toggleMode={toggleMode} />
-
-      <main className="hero-section">
-        <div className="illustration-wrapper">
-          <img
-            src="/src/assets/images/ac14aa08-da0d-4144-950e-4c29d991e354.png"
-            alt="Illustration of a desk setup with a laptop showing 'Hello World', framed pictures, a camera, and a plant."
-            className="main-illustration-placeholder"
-          />
-        </div>
-
-        <h1 className="hero-tagline">Desenvolvedor Full Stack</h1>
-      </main>
+      <Routes>
+        {" "}
+        {/* Define as rotas para o conteúdo principal */}
+        {/* Rota para a página inicial (Home) */}
+        <Route
+          path="/"
+          element={
+            <main className="hero-section">
+              <div className="illustration-wrapper">
+                <img
+                  src="/src/assets/images/ac14aa08-da0d-4144-950e-4c29d991e354.png"
+                  alt="Illustration of a desk setup with a laptop showing 'Hello World', framed pictures, a camera, and a plant."
+                  className="main-illustration-placeholder"
+                />
+              </div>
+              <h1 className="hero-tagline">Desenvolvedor Full Stack</h1>
+            </main>
+          }
+        />
+        {/* <<< AQUI ESTÁ A DEFINIÇÃO DA ROTA PARA A PÁGINA "SOBRE MIM" */}
+        <Route path="/sobre-mim" element={<SobreMim />} />
+        {/* Adicione outras rotas aqui conforme for criando as páginas */}
+        {/* <Route path="/projetos" element={<Projetos />} /> */}
+      </Routes>
     </>
   );
 }
