@@ -1,0 +1,119 @@
+/* src/pages/SobreMim/SobreMim.css */
+
+/* Estilos existentes para .sobre-mim-page */
+.sobre-mim-page {
+  padding: var(--spacing-lg) var(--spacing-md);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .sobre-mim-page {
+  color: var(--color-text-primary-dark);
+}
+
+/* Estilos para o cabeçalho da página (foto + texto) */
+.sobre-mim-header {
+  display: flex;
+  align-items: center; /* Alinha a foto e o bloco de texto verticalmente ao centro */
+  gap: 30px; /* Espaço entre a foto e o bloco de texto */
+  margin-bottom: var(--spacing-lg);
+  text-align: left; /* Alinhamento padrão para telas maiores */
+}
+
+/* Estilos para o container da foto */
+.profile-photo-container {
+  width: 150px; /* Largura da foto */
+  height: 150px; /* Altura igual à largura para um círculo perfeito */
+  flex-shrink: 0; /* Impede que o container da foto encolha em flexbox */
+  border-radius: 50%; /* Torna a foto circular */
+  overflow: hidden;
+  border: 3px solid var(--color-border);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .profile-photo-container {
+  border-color: var(--color-border-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+  object-position: center;
+  display: block;
+}
+
+/* NOVO: Estilos para o container do título e subtítulo */
+.sobre-mim-text-content {
+  flex-grow: 1; /* Permite que este bloco ocupe todo o espaço restante */
+}
+
+/* Estilos para o título principal */
+.sobre-mim-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem); /* Título responsivo */
+  font-weight: 700;
+  margin-bottom: 5px; /* Pequeno espaço entre o título e o subtítulo */
+  color: var(--color-tagline-text);
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .sobre-mim-title {
+  color: var(--color-text-primary-dark);
+}
+
+/* NOVO: Estilos para o subtítulo (frase de valor) */
+.sobre-mim-subtitle {
+  font-size: clamp(
+    1.2rem,
+    2.5vw,
+    1.8rem
+  ); /* Menor que o título, mas ainda proeminente */
+  font-weight: 500; /* Um peso de fonte um pouco mais leve para distinção */
+  color: var(
+    --color-text-secondary
+  ); /* Pode usar uma cor secundária para distinção */
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .sobre-mim-subtitle {
+  color: var(--color-text-secondary-dark);
+}
+
+/* Estilos para o container do texto principal */
+.sobre-mim-text-container p {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.1rem;
+}
+
+.sobre-mim-text-container strong {
+  font-weight: 700;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .sobre-mim-header {
+    flex-direction: column; /* Empilha foto e texto */
+    text-align: center;
+    gap: var(--spacing-md); /* Ajusta o gap para mobile */
+  }
+
+  .profile-photo-container {
+    margin-bottom: 0; /* Já tem gap no pai */
+    width: 120px; /* Reduz o tamanho da foto em telas menores */
+    height: 120px;
+  }
+
+  .sobre-mim-title {
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    margin-bottom: 5px;
+  }
+
+  .sobre-mim-subtitle {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+  }
+}

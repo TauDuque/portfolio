@@ -351,6 +351,10 @@ a:hover {
   margin-top: -37px; /* Movido mais 2px para cima */
 }
 
+.header-left {
+  font-size: 1.4rem;
+}
+
 /* 
     Ajustes Responsivos
 */
@@ -380,6 +384,7 @@ a:hover {
     width: 100%;
     text-align: center;
     justify-content: center; /* Centraliza os itens dentro de seus contêineres flex */
+    font-size: 2rem;
   }
 
   .main-nav ul {
