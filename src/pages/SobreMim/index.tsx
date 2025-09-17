@@ -1,6 +1,6 @@
 // src/pages/SobreMim/index.tsx
 import React from "react";
-import "./SobreMim.css"; // O CSS está na mesma pasta
+import "./style.css"; // O CSS está na mesma pasta
 
 const SobreMim: React.FC = () => {
   return (
