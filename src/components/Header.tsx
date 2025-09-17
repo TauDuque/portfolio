@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   isDarkMode: boolean;
@@ -9,14 +10,12 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleMode }) => {
   return (
     <header className="site-header">
       <div className="header-left">
-        <a href="#" className="site-logo">
-          Tauan Ribeiro
-        </a>
+        <Link to="/">Tauan Ribeiro</Link>
       </div>
       <nav className="main-nav">
         <ul>
           <li>
-            <a href="#">Sobre mim</a>
+            <Link to="/sobre-mim">Sobre mim</Link>
           </li>
           <li>
             <a href="#">Projetos</a>
