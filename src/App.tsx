@@ -6,6 +6,7 @@ import SobreMim from "./pages/SobreMim"; // Importa o componente SobreMim
 import "./App.css";
 import Trajetoria from "./pages/Trajetoria";
 import HabilidadesFerramentas from "./pages/HabilidadesFerramentas";
+import Contato from "./pages/Contato";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -52,6 +53,7 @@ function App() {
           path="/habilidades-ferramentas"
           element={<HabilidadesFerramentas isDarkMode={isDarkMode} />}
         />
+        <Route path="/contato" element={<Contato />} />
         {/* <Route path="/projetos" element={<Projetos />} /> */}
       </Routes>
     </>

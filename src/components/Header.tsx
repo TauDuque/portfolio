@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleMode }) => {
             <Link to="/sobre-mim">Sobre mim</Link>
           </li>
           <li>
-            <a href="#">Contato</a>
+            <a href="/contato">Contato</a>
           </li>
         </ul>
       </nav>
