@@ -33,6 +33,7 @@ const Contato: React.FC = () => {
             <a
               href="https://linkedin.com/in/tau-ribeiro"
               rel="noopener noreferrer"
+              target="_blank"
             >
               linkedin.com/in/tau-ribeiro
             </a>
@@ -43,7 +44,11 @@ const Contato: React.FC = () => {
             <i className="fa-brands fa-github"></i>
             <h4>GitHub</h4>
             {/* ATENÇÃO: Substitua "https://github.com/seu-usuario" pelo seu link real do GitHub */}
-            <a href="https://github.com/TauDuque" rel="noopener noreferrer">
+            <a
+              href="https://github.com/TauDuque"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               github.com/TauDuque
             </a>
           </div>

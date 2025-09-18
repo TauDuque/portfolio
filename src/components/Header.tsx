@@ -15,10 +15,10 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleMode }) => {
       <nav className="main-nav">
         <ul>
           <li>
-            <a href="#">Projetos</a>
+            <Link to="/habilidades-ferramentas">Habilidades</Link>
           </li>
           <li>
-            <Link to="/habilidades-ferramentas">Habilidades</Link>
+            <Link to="/projetos">Projetos</Link>
           </li>
           <li>
             <Link to="/trajetoria">Trajetória</Link>
@@ -39,24 +39,30 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleMode }) => {
         <div className="header-icons">
           {/* Ícone do GitHub */}
           <a
-            href="https://github.com/seu-usuario"
+            href="https://github.com/TauDuque"
             rel="noopener noreferrer"
             className="icon-box"
+            target="_blank"
           >
             <i className="fa-brands fa-github"></i>{" "}
             {/* Ícone Font Awesome para GitHub */}
           </a>
           {/* Ícone do LinkedIn */}
           <a
-            href="https://linkedin.com/in/seu-perfil"
+            href="https://linkedin.com/in/tau-ribeiro"
             rel="noopener noreferrer"
             className="icon-box"
+            target="_blank"
           >
             <i className="fa-brands fa-linkedin-in"></i>{" "}
             {/* Ícone Font Awesome para LinkedIn */}
           </a>
           {/* Ícone do Email (Gmail) */}
-          <a href="mailto:seu.email@gmail.com" className="icon-box">
+          <a
+            href="mailto:duque.tauribeiro@gmail.com"
+            className="icon-box"
+            target="_blank"
+          >
             <i className="fa-solid fa-envelope"></i>{" "}
             {/* Ícone Font Awesome para Email */}
           </a>
