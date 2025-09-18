@@ -7,6 +7,9 @@ import "./App.css";
 import Trajetoria from "./pages/Trajetoria";
 import HabilidadesFerramentas from "./pages/HabilidadesFerramentas";
 import Contato from "./pages/Contato";
+import Projetos from "./pages/Projetos";
+import GaleriaDeArteDetalhes from "./pages/Projetos/galeria-arte-detalhes";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -27,6 +30,7 @@ function App() {
       {" "}
       {/* Fragmento para agrupar o Header e as Routes */}
       <Header isDarkMode={isDarkMode} toggleMode={toggleMode} />
+      <ScrollToTop />
       <Routes>
         {" "}
         {/* Define as rotas para o conteúdo principal */}
@@ -54,7 +58,11 @@ function App() {
           element={<HabilidadesFerramentas isDarkMode={isDarkMode} />}
         />
         <Route path="/contato" element={<Contato />} />
-        {/* <Route path="/projetos" element={<Projetos />} /> */}
+        <Route path="/projetos" element={<Projetos />} />
+        <Route
+          path="/projetos/galeria-de-arte"
+          element={<GaleriaDeArteDetalhes />}
+        />
       </Routes>
     </>
   );

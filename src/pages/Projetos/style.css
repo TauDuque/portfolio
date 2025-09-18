@@ -1,0 +1,222 @@
+/* src/pages/Projetos/Projetos.css */
+
+/* Container principal da página de projetos */
+.projects-page-container {
+  max-width: 1200px; /* Largura máxima para os cards (ajuste conforme desejar) */
+  margin: 40px auto; /* Centraliza o container e adiciona espaço vertical */
+  padding: 0 20px; /* Padding lateral para telas menores que o max-width */
+  display: flex;
+  flex-direction: column; /* Garante que os cards fiquem um abaixo do outro */
+  gap: 40px; /* Espaçamento generoso entre os cards */
+}
+
+/* Título principal da página */
+.page-title {
+  font-family: var(--font-family-primary);
+  font-size: clamp(2.5rem, 6vw, 3.5rem); /* Tamanho responsivo maior */
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 30px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo para cada card de projeto */
+.project-card {
+  background-color: var(--color-background-light);
+  border: 1.5px solid var(--color-border);
+  border-radius: 12px; /* Mantém o arredondamento */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra mais pronunciada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Importante para que a imagem arredondada não vaze */
+  width: 100%; /* Ocupa 100% da largura do container projects-page-container */
+  display: flex;
+  flex-direction: column; /* Empilha a imagem e o texto */
+}
+
+/* Efeito de hover para os cards */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Área visual (para o screenshot) - MUITO MAIS DESTAQUE */
+.project-visual-area {
+  width: 100%; /* Ocupa 100% da largura do card */
+  height: 585px; /* ALTURA FIXA PARA GRANDE DESTAQUE DA IMAGEM */
+  /* Você pode ajustar esta altura (380px) para mais ou menos destaque.
+     Alternativamente, pode usar padding-top para proporção (ex: padding-top: 45%;)
+     mas uma altura fixa dá mais controle sobre o destaque visual. */
+  overflow: hidden; /* Garante que a imagem se ajuste perfeitamente */
+  display: flex; /* Para centralizar o placeholder */
+  justify-content: center;
+  align-items: center;
+  /* Arredonda apenas os cantos superiores para combinar com o card */
+  border-top-left-radius: 11px; /* 1px a menos que o card para evitar vazamento */
+  border-top-right-radius: 11px;
+}
+
+/* Placeholder para o screenshot (enquanto a imagem real não é inserida) */
+.screenshot-placeholder {
+  width: 100%;
+  height: 100%; /* Ocupa toda a altura da project-visual-area */
+  background-color: var(--color-illustration-bg);
+  border: 2px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+.screenshot-placeholder p {
+  margin: 0;
+  padding: 0 10px; /* Pequeno padding para o texto do placeholder */
+}
+
+/* Estilo para a imagem real do screenshot */
+.project-screenshot {
+  width: 100%;
+  height: 100%; /* Ocupa toda a altura da project-visual-area */
+  display: block;
+  object-fit: cover; /* ESSENCIAL: Garante que a imagem cubra a área sem distorcer */
+  object-position: center; /* Centraliza a imagem dentro da área */
+  /* Não precisa de border-radius aqui, pois o overflow: hidden do pai já resolve */
+}
+
+/* Área de texto do projeto - AGORA COM SEU PRÓPRIO PADDING */
+.project-text-area {
+  padding: 30px; /* Padding interno para o texto, título e botão */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre título, descrição e botão */
+}
+
+/* Título do projeto dentro do card */
+.project-title {
+  font-family: var(--font-family-primary);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin-bottom: 0; /* Removido margin-bottom para usar o gap do pai */
+}
+
+/* Descrição breve do projeto */
+.project-description {
+  font-family: var(--font-family-primary);
+  font-size: 1.15em;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0; /* Removido margin-bottom para usar o gap do pai */
+}
+
+/* Botão "Ver Detalhes" */
+.btn-details {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: var(--color-accent-dark);
+  color: var(--color-background-dark);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+.btn-details:hover {
+  background-color: #ff47a6;
+  transform: translateY(-2px);
+}
+
+/* --- Adaptações para Dark Mode --- */
+[data-theme="dark"] .projects-page-container .page-title,
+[data-theme="dark"] .project-card .project-title {
+  color: var(--color-text-primary-dark);
+}
+
+[data-theme="dark"] .project-card {
+  background-color: var(--color-background-secondary-dark);
+  border-color: var(--color-border-dark);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .project-card:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .project-description {
+  color: var(--color-text-secondary-dark);
+}
+
+[data-theme="dark"] .screenshot-placeholder {
+  background-color: var(--color-illustration-bg-dark);
+  border-color: var(--color-border-dark);
+  color: var(--color-text-secondary-dark);
+}
+
+[data-theme="dark"] .btn-details {
+  background-color: var(--color-accent-dark);
+  color: var(--color-background-dark);
+}
+
+[data-theme="dark"] .btn-details:hover {
+  background-color: #ff47a6;
+}
+
+/* --- Ajustes de Responsividade para Telas Menores --- */
+@media (max-width: 768px) {
+  /* Ajuste para telas menores */
+  .projects-page-container {
+    padding: 0 15px;
+    gap: 40px; /* Reduz o espaçamento entre cards em mobile */
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 20px;
+  }
+
+  .project-card {
+    border-radius: 8px; /* Menos arredondado em mobile */
+  }
+
+  .project-visual-area {
+    height: 250px; /* Reduz a altura da imagem em mobile */
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
+  .project-text-area {
+    padding: 20px; /* Reduz o padding interno do texto em mobile */
+    gap: 15px;
+  }
+
+  .project-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .project-description {
+    font-size: 1em;
+  }
+
+  .btn-details {
+    padding: 10px 20px;
+    font-size: 1em;
+    width: 100%; /* Botão ocupa toda a largura em mobile */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-page-container {
+    padding: 0 10px;
+  }
+
+  .project-visual-area {
+    height: 200px; /* Ainda menor em telas muito pequenas */
+  }
+}
