@@ -10,6 +10,7 @@ import Contato from "./pages/Contato";
 import Projetos from "./pages/Projetos";
 import GaleriaDeArteDetalhes from "./pages/Projetos/galeria-arte-detalhes";
 import ScrollToTop from "./components/ScrollToTop";
+import APIMonitorDetalhes from "./pages/Projetos/api-monitor-detalhes";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -63,6 +64,7 @@ function App() {
           path="/projetos/galeria-de-arte"
           element={<GaleriaDeArteDetalhes />}
         />
+        <Route path="/projetos/api-monitor" element={<APIMonitorDetalhes />} />
       </Routes>
     </>
   );
