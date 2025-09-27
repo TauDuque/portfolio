@@ -1,0 +1,50 @@
+/* src/components/Header.css ou seu arquivo de estilo global */
+
+.language-selector-buttons {
+  display: flex;
+  gap: 8px; /* Espaçamento entre os botões */
+  margin-right: 15px; /* Espaçamento entre o seletor de idioma e o botão de modo */
+}
+
+.lang-button {
+  background: none;
+  border: 1px solid var(--color-border); /* Usar sua variável de borda */
+  border-radius: 4px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 1.2em; /* Ajuste o tamanho da bandeira */
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary); /* Cor do texto, se houver */
+}
+
+.lang-button:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Leve fundo no hover */
+  border-color: var(--color-accent-dark); /* Ou outra cor de destaque */
+}
+
+.lang-button.active {
+  background-color: var(--color-accent-dark); /* Cor de destaque para o ativo */
+  border-color: var(--color-accent-dark);
+  color: var(--color-background-dark); /* Cor do texto para o ativo */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes para Dark Mode */
+[data-theme="dark"] .lang-button {
+  border: 1px solid var(--color-border-dark);
+  color: var(--color-text-primary-dark);
+}
+
+[data-theme="dark"] .lang-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-accent-dark);
+}
+
+[data-theme="dark"] .lang-button.active {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: var(--color-background-dark);
+}

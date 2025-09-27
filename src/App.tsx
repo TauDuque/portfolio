@@ -1,7 +1,7 @@
 // src/App.tsx
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import SobreMim from "./pages/SobreMim"; // Importa o componente SobreMim
 import "./App.css";
 import Trajetoria from "./pages/Trajetoria";
@@ -11,6 +11,7 @@ import Projetos from "./pages/Projetos";
 import GaleriaDeArteDetalhes from "./pages/Projetos/galeria-arte-detalhes";
 import ScrollToTop from "./components/ScrollToTop";
 import APIMonitorDetalhes from "./pages/Projetos/api-monitor-detalhes";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -30,42 +31,47 @@ function App() {
     <>
       {" "}
       {/* Fragmento para agrupar o Header e as Routes */}
-      <Header isDarkMode={isDarkMode} toggleMode={toggleMode} />
-      <ScrollToTop />
-      <Routes>
-        {" "}
-        {/* Define as rotas para o conteúdo principal */}
-        {/* Rota para a página inicial (Home) */}
-        <Route
-          path="/"
-          element={
-            <main className="hero-section">
-              <div className="illustration-wrapper">
-                <img
-                  src="/src/assets/images/ac14aa08-da0d-4144-950e-4c29d991e354.png"
-                  alt="Illustration of a desk setup with a laptop showing 'Hello World', framed pictures, a camera, and a plant."
-                  className="main-illustration-placeholder"
-                />
-              </div>
-              <h1 className="hero-tagline">Desenvolvedor Full Stack</h1>
-            </main>
-          }
-        />
-        {/* <<< AQUI ESTÁ A DEFINIÇÃO DA ROTA PARA A PÁGINA "SOBRE MIM" */}
-        <Route path="/sobre-mim" element={<SobreMim />} />
-        <Route path="/trajetoria" element={<Trajetoria />} />
-        <Route
-          path="/habilidades-ferramentas"
-          element={<HabilidadesFerramentas isDarkMode={isDarkMode} />}
-        />
-        <Route path="/contato" element={<Contato />} />
-        <Route path="/projetos" element={<Projetos />} />
-        <Route
-          path="/projetos/galeria-de-arte"
-          element={<GaleriaDeArteDetalhes />}
-        />
-        <Route path="/projetos/api-monitor" element={<APIMonitorDetalhes />} />
-      </Routes>
+      <LanguageProvider>
+        <Header isDarkMode={isDarkMode} toggleMode={toggleMode} />
+        <ScrollToTop />
+        <Routes>
+          {" "}
+          {/* Define as rotas para o conteúdo principal */}
+          {/* Rota para a página inicial (Home) */}
+          <Route
+            path="/"
+            element={
+              <main className="hero-section">
+                <div className="illustration-wrapper">
+                  <img
+                    src="/src/assets/images/ac14aa08-da0d-4144-950e-4c29d991e354.png"
+                    alt="Illustration of a desk setup with a laptop showing 'Hello World', framed pictures, a camera, and a plant."
+                    className="main-illustration-placeholder"
+                  />
+                </div>
+                <h1 className="hero-tagline">Desenvolvedor Full Stack</h1>
+              </main>
+            }
+          />
+          {/* <<< AQUI ESTÁ A DEFINIÇÃO DA ROTA PARA A PÁGINA "SOBRE MIM" */}
+          <Route path="/sobre-mim" element={<SobreMim />} />
+          <Route path="/trajetoria" element={<Trajetoria />} />
+          <Route
+            path="/habilidades-ferramentas"
+            element={<HabilidadesFerramentas isDarkMode={isDarkMode} />}
+          />
+          <Route path="/contato" element={<Contato />} />
+          <Route path="/projetos" element={<Projetos />} />
+          <Route
+            path="/projetos/galeria-de-arte"
+            element={<GaleriaDeArteDetalhes />}
+          />
+          <Route
+            path="/projetos/api-monitor"
+            element={<APIMonitorDetalhes />}
+          />
+        </Routes>
+      </LanguageProvider>
     </>
   );
 }
