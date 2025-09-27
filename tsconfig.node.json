@@ -12,12 +12,13 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
+    "isolatedModules": true, // Adicionei isolatedModules aqui, pois estava faltando em comparação com o app.json
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    // "erasableSyntaxOnly": true, <--- REMOVA ESTA LINHA
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },

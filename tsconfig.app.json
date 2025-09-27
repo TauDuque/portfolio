@@ -14,12 +14,13 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "isolatedModules": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    // "erasableSyntaxOnly": true, <--- REMOVA ESTA LINHA
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
