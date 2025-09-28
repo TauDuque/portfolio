@@ -161,6 +161,21 @@
         "course_codecademy": "Codecademy - Learn JavaScript (2021)",
         "course_mdn": "MDN Web Docs - Guía de JavaScript (2021)"
     },
+    "projects_page": {
+        "main_title": "Mis Proyectos",
+        "gallery_project": {
+            "title": "Galería de Arte Personal",
+            "description": "Explora y conecta con el arte en tu propia galería digital. Este proyecto permite a los usuarios navegar, buscar y marcar como favoritas obras de la reconocida colección del Museo Met, con acceso a información detallada sobre artistas y contextos históricos. Una experiencia inmersiva que une tecnología y cultura.",
+            "details_button": "Ver Detalles",
+            "screenshot_alt": "Captura de pantalla principal del proyecto Galería de Arte Personal"
+        },
+        "api_monitor_project": {
+            "title": "API Monitor",
+            "description": "Garantiza la estabilidad de tus aplicaciones con un monitoreo de APIs en tiempo real. Este proyecto permite configurar verificaciones periódicas, visualizar historiales de rendimiento y recibir alertas por correo electrónico en caso de fallos. Destaca el uso avanzado de colas con Bull y Redis, comunicación en tiempo real con Socket.io y una robusta arquitectura en Docker/Nginx.",
+            "details_button": "Ver Detalles",
+            "screenshot_alt": "Captura de pantalla principal del proyecto API Monitor"
+        }
+    },
     "project_details": {
         "api_monitor": {
             "title": "API Monitor",
