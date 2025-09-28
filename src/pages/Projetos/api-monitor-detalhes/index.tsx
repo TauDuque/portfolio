@@ -10,7 +10,7 @@ const APIMonitorDetalhes = () => {
       {/* Seção Hero - Imagem de Destaque */}
       <section className="project-hero-visual">
         <img
-          src="public/assets/images/monitor_portada.png" // Substitua pelo caminho da sua imagem hero
+          src="/assets/images/monitor_portada.png" // Substitua pelo caminho da sua imagem hero
           alt={t("api_monitor_details_page.hero_image_alt")}
           className="hero-image"
         />
@@ -87,7 +87,7 @@ const APIMonitorDetalhes = () => {
         <section className="visual-showcase single-item">
           <div className="visual-item">
             <img
-              src="public/assets/images/monitor_detalhe.png" // Substitua pelo caminho do seu screenshot
+              src="/assets/images/monitor_detalhe.png" // Substitua pelo caminho do seu screenshot
               alt={t("api_monitor_details_page.screenshot_alt")}
               className="showcase-media"
             />

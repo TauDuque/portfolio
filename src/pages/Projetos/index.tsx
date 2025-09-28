@@ -19,7 +19,7 @@ const Projetos = () => {
           */}
           <div className="screenshot-placeholder"></div>
           <img
-            src="public/assets/images/galeria_1.png"
+            src="/assets/images/galeria_1.png"
             alt={t("projects_page.gallery_project.screenshot_alt")}
             className="project-screenshot"
           />
@@ -51,7 +51,7 @@ const Projetos = () => {
             <p></p>
           </div>
           <img
-            src="public/assets/images/monitor_1.png"
+            src="/assets/images/monitor_1.png"
             alt={t("projects_page.api_monitor_project.screenshot_alt")}
             className="project-screenshot"
           />
