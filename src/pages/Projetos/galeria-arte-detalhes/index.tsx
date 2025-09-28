@@ -1,25 +1,23 @@
 import { Link } from "react-router-dom";
 import "./style.css"; // CSS específico para esta página
+import { useTranslation } from "../../../hooks/useTranslation"; // Importe seu hook de tradução aqui
 
 const GaleriaDeArteDetalhes = () => {
+  const { t } = useTranslation(); // Inicializa o hook de tradução
+
   return (
     <div className="project-detail-page-container">
       {/* Seção Hero - Imagem de Destaque */}
       <section className="project-hero-visual">
-        {/*
-          * IMAGEM PRINCIPAL DE DESTAQUE (SCREENSHOT 1) *
-          Esta será a imagem que dará o primeiro impacto visual na página.
-          Pode ser o screenshot mais bonito e representativo da UI.
-        */}
         <img
           src="/src/assets/images/galeria_portada.png" // Substitua pelo caminho da sua imagem
-          alt="Screenshot principal da Galeria de Arte Pessoal"
+          alt={t("gallery_details_page.hero_image_alt")}
           className="hero-image"
         />
         <div className="hero-overlay">
-          <h1 className="hero-title">Galeria de Arte Pessoal</h1>
+          <h1 className="hero-title">{t("gallery_details_page.hero_title")}</h1>
           <p className="hero-subtitle">
-            Sua jornada digital pelo mundo da arte
+            {t("gallery_details_page.hero_subtitle")}
           </p>
         </div>
       </section>
@@ -27,38 +25,21 @@ const GaleriaDeArteDetalhes = () => {
       <div className="project-content-wrapper">
         {/* Visão Geral e Funcionalidades Chave */}
         <section className="detail-section">
-          <h2 className="section-title">Visão Geral e Funcionalidades Chave</h2>
+          <h2 className="section-title">
+            {t("gallery_details_page.overview_section_title")}
+          </h2>
           <p className="section-text">
-            A "Galeria de Arte Pessoal" é uma aplicação web que transforma a
-            experiência de explorar o vasto acervo do renomado Metropolitan
-            Museum of Art em uma jornada digital personalizada. Desenvolvida
-            para conectar entusiastas da arte com obras significativas, o
-            projeto oferece uma interface intuitiva para descoberta e interação,
-            permitindo que cada usuário construa sua própria coleção de
-            favoritos.
+            {t("gallery_details_page.overview_paragraph")}
           </p>
-          <h3 className="subsection-title">Funcionalidades Principais:</h3>
+          <h3 className="subsection-title">
+            {t("gallery_details_page.features_subtitle")}
+          </h3>
           <ul className="feature-list">
-            <li>
-              Autenticação de Usuário: Sistema seguro de login para acesso a
-              funcionalidades personalizadas.
-            </li>
-            <li>
-              Exploração do Acervo: Navegação e busca eficientes por obras de
-              arte do Metropolitan Museum of Art.
-            </li>
-            <li>
-              Detalhes da Obra: Visualização de informações completas sobre cada
-              peça, incluindo artista, ano de criação e contexto.
-            </li>
-            <li>
-              Favoritos Personalizados: Capacidade de selecionar e gerenciar uma
-              coleção privada de obras preferidas.
-            </li>
-            <li>
-              Conexão com a Arte: Uma experiência imersiva que visa aproximar o
-              usuário dos grandes mestres e movimentos artísticos.
-            </li>
+            <li>{t("gallery_details_page.feature_1")}</li>
+            <li>{t("gallery_details_page.feature_2")}</li>
+            <li>{t("gallery_details_page.feature_3")}</li>
+            <li>{t("gallery_details_page.feature_4")}</li>
+            <li>{t("gallery_details_page.feature_5")}</li>
           </ul>
         </section>
 
@@ -67,91 +48,70 @@ const GaleriaDeArteDetalhes = () => {
           <div className="visual-item">
             <img
               src="/src/assets/gifs/gif_galeria_1.gif" // Substitua pelo caminho do seu GIF
-              alt="GIF demonstrando navegação e busca na galeria"
+              alt={t("gallery_details_page.gif_alt")}
               className="showcase-media"
             />
             <p className="media-caption">
-              Navegação fluida e busca inteligente pelo acervo de obras.
+              {t("gallery_details_page.gif_caption")}
             </p>
           </div>
+          {/* O screenshot comentado no original foi mantido comentado aqui */}
           {/* <div className="visual-item">
             <img
               src="/src/assets/images/galeria_2.png" // Substitua pelo caminho do seu screenshot
-              alt="Screenshot da página de detalhes de uma obra de arte"
+              alt={t('gallery_details_page.screenshot_alt_commented')}
               className="showcase-media"
             />
             <p className="media-caption">
-              Página de detalhes da obra, com informações ricas e imagem em alta
-              resolução.
+              {t('gallery_details_page.screenshot_caption_commented')}
             </p>
           </div> */}
         </section>
 
         {/* Stack Tecnológico */}
         <section className="detail-section">
-          <h2 className="section-title">Stack Tecnológico</h2>
+          <h2 className="section-title">
+            {t("gallery_details_page.stack_section_title")}
+          </h2>
           <p className="section-text">
-            Este projeto Full Stack foi construído com uma combinação robusta de
-            tecnologias modernas, garantindo tanto uma interface de usuário
-            dinâmica quanto um backend eficiente e escalável.
+            {t("gallery_details_page.stack_paragraph")}
           </p>
           <div className="tech-stack-grid">
             <div className="tech-category">
-              <h3 className="subsection-title">Frontend:</h3>
+              <h3 className="subsection-title">
+                {t("gallery_details_page.frontend_subtitle")}
+              </h3>
               <ul className="tech-list">
-                <li>
-                  React: Biblioteca JavaScript para construção de interfaces de
-                  usuário reativas e componentizadas.
-                </li>
-                <li>
-                  Redux: Gerenciamento de estado global para uma experiência de
-                  usuário consistente e previsível.
-                </li>
-                <li>
-                  Tailwind CSS: Framework CSS utilitário para estilização rápida
-                  e responsiva, alinhada com uma estética minimalista e
-                  elegante.
-                </li>
+                <li>{t("gallery_details_page.frontend_tech_1")}</li>
+                <li>{t("gallery_details_page.frontend_tech_2")}</li>
+                <li>{t("gallery_details_page.frontend_tech_3")}</li>
               </ul>
             </div>
             <div className="tech-category">
-              <h3 className="subsection-title">Backend:</h3>
+              <h3 className="subsection-title">
+                {t("gallery_details_page.backend_subtitle")}
+              </h3>
               <ul className="tech-list">
-                <li>
-                  Node.js: Ambiente de execução JavaScript assíncrono e
-                  orientado a eventos, ideal para APIs de alto desempenho.
-                </li>
-                <li>
-                  Prisma: ORM (Object-Relational Mapper) moderno e type-safe
-                  para interações eficientes e seguras com o banco de dados.
-                </li>
-                <li>
-                  MySQL: Sistema de gerenciamento de banco de dados relacional,
-                  confiável para armazenamento de dados de usuários e favoritos.
-                </li>
-                <li>
-                  Autenticação JWT: Implementação de JSON Web Tokens para um
-                  sistema de autenticação seguro e stateless.
-                </li>
+                <li>{t("gallery_details_page.backend_tech_1")}</li>
+                <li>{t("gallery_details_page.backend_tech_2")}</li>
+                <li>{t("gallery_details_page.backend_tech_3")}</li>
+                <li>{t("gallery_details_page.backend_tech_4")}</li>
               </ul>
             </div>
           </div>
-          {/* Opcional: Adicionar logos das tecnologias aqui */}
         </section>
 
         {/* Bloco Visual 2: GIF 2 */}
         <section className="visual-showcase single-item">
           {" "}
-          {/* Adicionado classe single-item para layout de um item */}
           <div className="visual-item">
             <img
               src="/src/assets/images/galeria_2.png" // Substitua pelo caminho do seu screenshot
-              alt="Screenshot da página de detalhes de uma obra de arte"
+              alt={t("gallery_details_page.screenshot2_alt")}
               className="showcase-media"
             />
             <p className="media-caption">
-              Página de detalhes da obra, com maiores informações e mais
-              detalhes da imagem.
+              {t("gallery_details_page.screenshot2_caption")}
             </p>
           </div>
         </section>
@@ -159,76 +119,51 @@ const GaleriaDeArteDetalhes = () => {
         {/* Arquitetura e Detalhes de Implementação */}
         <section className="detail-section">
           <h2 className="section-title">
-            Arquitetura e Detalhes de Implementação
+            {t("gallery_details_page.architecture_section_title")}
           </h2>
           <p className="section-text">
-            A arquitetura da "Galeria de Arte Pessoal" foi projetada para ser
-            modular e distribuída, otimizando o desempenho e a manutenção. O
-            frontend e o backend operam de forma independente, comunicando-se
-            através de uma API RESTful.
+            {t("gallery_details_page.architecture_paragraph")}
           </p>
-          <h3 className="subsection-title">Hospedagem:</h3>
+          <h3 className="subsection-title">
+            {t("gallery_details_page.hosting_subtitle")}
+          </h3>
           <ul className="feature-list">
-            <li>
-              Frontend (Vercel): A interface do usuário é hospedada na Vercel,
-              garantindo alta disponibilidade e entrega rápida de conteúdo
-              estático.
-            </li>
-            <li>
-              Backend (Railway): A API e a lógica de negócios residem na
-              Railway, uma plataforma que oferece escalabilidade e gerenciamento
-              simplificado de aplicações Node.js.
-            </li>
+            <li>{t("gallery_details_page.hosting_1")}</li>
+            <li>{t("gallery_details_page.hosting_2")}</li>
           </ul>
-          <h3 className="subsection-title">Banco de Dados:</h3>
+          <h3 className="subsection-title">
+            {t("gallery_details_page.database_subtitle")}
+          </h3>
           <p className="section-text">
-            O MySQL, também hospedado na Railway e gerenciado via Prisma,
-            armazena dados de usuários e suas coleções de obras favoritas,
-            garantindo integridade e acesso rápido.
+            {t("gallery_details_page.database_paragraph")}
           </p>
-          <h3 className="subsection-title">Integração:</h3>
+          <h3 className="subsection-title">
+            {t("gallery_details_page.integration_subtitle")}
+          </h3>
           <p className="section-text">
-            A comunicação entre o frontend e o backend é realizada através de
-            requisições HTTP, com o backend atuando como um intermediário para a
-            API externa do Metropolitan Museum of Art, processando e formatando
-            os dados para o cliente.
+            {t("gallery_details_page.integration_paragraph")}
           </p>
-          {/* Opcional: Adicionar um diagrama de arquitetura aqui */}
         </section>
 
         {/* Desafios Técnicos e Soluções/Aprendizados */}
         <section className="detail-section">
           <h2 className="section-title">
-            Desafios Técnicos e Soluções/Aprendizados
+            {t("gallery_details_page.challenges_section_title")}
           </h2>
           <p className="section-text">
-            O desenvolvimento da Galeria de Arte Pessoal apresentou
-            oportunidades valiosas para aprofundar conhecimentos em integração
-            de APIs e gerenciamento de estado complexo.
-          </p>
-          <h3 className="subsection-title">Integração com API Externa:</h3>
-          <p className="section-text">
-            Um dos principais desafios foi a integração eficiente e otimizada
-            com a API do Metropolitan Museum of Art. Isso envolveu a compreensão
-            da estrutura de dados da API, a implementação de estratégias de
-            caching para reduzir requisições repetitivas e a adaptação dos dados
-            recebidos para o modelo interno da aplicação. A solução envolveu a
-            criação de uma camada de serviço no backend para abstrair a API
-            externa, permitindo maior controle sobre os dados e facilitando
-            futuras expansões.
+            {t("gallery_details_page.challenges_paragraph")}
           </p>
           <h3 className="subsection-title">
-            Gerenciamento de Estado de Usuário:
+            {t("gallery_details_page.api_integration_subtitle")}
           </h3>
           <p className="section-text">
-            Com funcionalidades como login e a seleção de obras favoritas, o
-            gerenciamento do estado global da aplicação tornou-se crucial. A
-            implementação do Redux no frontend foi fundamental para manter a
-            consistência dos dados do usuário e das obras favoritadas em
-            diferentes componentes, garantindo uma experiência fluida e reativa.
-            Isso solidificou a compreensão sobre a arquitetura Flux e a
-            importância de um fluxo de dados unidirecional em aplicações
-            complexas.
+            {t("gallery_details_page.api_integration_paragraph")}
+          </p>
+          <h3 className="subsection-title">
+            {t("gallery_details_page.state_management_subtitle")}
+          </h3>
+          <p className="section-text">
+            {t("gallery_details_page.state_management_paragraph")}
           </p>
         </section>
 
@@ -240,7 +175,7 @@ const GaleriaDeArteDetalhes = () => {
             className="btn-details"
             target="_blank"
           >
-            Ver Projeto Online
+            {t("gallery_details_page.view_project_online")}
           </Link>
           <Link
             to="https://github.com/TauDuque/galeria-pessoal-front-end"
@@ -248,7 +183,7 @@ const GaleriaDeArteDetalhes = () => {
             className="btn-details secondary"
             target="_blank"
           >
-            Repositório Frontend
+            {t("gallery_details_page.repo_frontend")}
           </Link>
           <Link
             to="https://github.com/TauDuque/galeria-pessoal-back-end"
@@ -256,7 +191,7 @@ const GaleriaDeArteDetalhes = () => {
             className="btn-details secondary"
             target="_blank"
           >
-            Repositório Backend
+            {t("gallery_details_page.repo_backend")}
           </Link>
         </section>
       </div>
