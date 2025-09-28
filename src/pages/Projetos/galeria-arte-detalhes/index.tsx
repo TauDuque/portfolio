@@ -10,7 +10,7 @@ const GaleriaDeArteDetalhes = () => {
       {/* Seção Hero - Imagem de Destaque */}
       <section className="project-hero-visual">
         <img
-          src="assets/images/galeria_portada.png" // Substitua pelo caminho da sua imagem
+          src="/assets/images/galeria_portada.png" // Substitua pelo caminho da sua imagem
           alt={t("gallery_details_page.hero_image_alt")}
           className="hero-image"
         />
