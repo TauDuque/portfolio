@@ -1,5 +1,6 @@
-/* src/components/Header.css ou seu arquivo de estilo global */
+/* src/components/style.css ou seu arquivo de estilo global */
 
+/* --- Estilos Existentes (Mantidos) --- */
 .language-selector-buttons {
   display: flex;
   gap: 8px; /* Espaçamento entre os botões */
@@ -8,27 +9,27 @@
 
 .lang-button {
   background: none;
-  border: 1px solid var(--color-border); /* Usar sua variável de borda */
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   padding: 5px 8px;
   cursor: pointer;
-  font-size: 1.2em; /* Ajuste o tamanho da bandeira */
+  font-size: 1.2em;
   transition: all 0.2s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-primary); /* Cor do texto, se houver */
+  color: var(--color-text-primary);
 }
 
 .lang-button:hover {
-  background-color: rgba(0, 0, 0, 0.05); /* Leve fundo no hover */
-  border-color: var(--color-accent-dark); /* Ou outra cor de destaque */
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: var(--color-accent-dark);
 }
 
 .lang-button.active {
-  background-color: var(--color-accent-dark); /* Cor de destaque para o ativo */
+  background-color: var(--color-accent-dark);
   border-color: var(--color-accent-dark);
-  color: var(--color-background-dark); /* Cor do texto para o ativo */
+  color: var(--color-background-dark);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -50,11 +51,233 @@
 }
 
 .site-header {
-  /* Propriedades existentes */
-  /* ... */
-  position: fixed; /* Adicione esta linha */
-  top: 0; /* Adicione esta linha */
-  width: 100%; /* Adicione esta linha */
-  z-index: 1000; /* Adicione esta linha para garantir que fique acima de tudo */
-  /* ... */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Adicione estas propriedades para o layout flexbox do header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px; /* Padding padrão para telas maiores */
+  height: var(--header-height); /* Altura definida */
+  background: rgba(255, 255, 255, 0.95); /* Fundo padrão */
+  border-bottom: 1.5px solid rgba(74, 85, 104, 0.8); /* Borda padrão */
+  transition: all 0.3s ease; /* Transição para mudanças de tema */
+}
+
+/* Estilos para o logo */
+.site-header .header-left a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 1.1em;
+}
+
+/* Estilos para a navegação principal */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 6rem; /* Seu gap atual, vamos ajustar abaixo */
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.main-nav li a:hover {
+  color: var(--color-text-secondary);
+  background: rgba(74, 85, 104, 0.1);
+}
+
+/* Estilos para o lado direito do header */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre os grupos de elementos (idioma, modo, ícones) */
+}
+
+/* Estilos para o botão de modo */
+.mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95em;
+  color: var(--color-text-primary);
+  transition: all 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  padding: 5px 8px; /* Adicionado padding para melhor hover */
+}
+
+.mode-toggle .icon {
+  font-size: 1.2em; /* Tamanho do ícone */
+}
+
+/* Estilos para os ícones sociais */
+.header-icons {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os ícones sociais */
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%; /* Para ícones circulares */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.icon-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Media Query para telas de Notebook (ex: 14 polegadas) --- */
+@media (max-width: 1440px) {
+  .site-header {
+    padding: 0 25px; /* Reduzir padding lateral */
+  }
+
+  .main-nav ul {
+    gap: 2.5rem; /* Reduzir o espaçamento entre os links de navegação */
+  }
+
+  .main-nav li a {
+    padding: 0.4rem 0.8rem; /* Reduzir padding dos links */
+    font-size: 0.95em; /* Ligeira redução do tamanho da fonte */
+  }
+
+  .header-right {
+    gap: 15px; /* Reduzir o espaçamento entre os grupos de elementos */
+  }
+
+  .language-selector-buttons {
+    margin-right: 10px; /* Reduzir margem à direita */
+    gap: 6px; /* Reduzir gap entre botões de idioma */
+  }
+
+  .lang-button {
+    padding: 4px 6px; /* Reduzir padding dos botões de idioma */
+    font-size: 1.1em; /* Ligeira redução do tamanho da bandeira */
+  }
+
+  .mode-toggle {
+    gap: 5px; /* Reduzir gap entre ícone e texto do modo */
+    font-size: 0.9em; /* Ligeira redução do tamanho da fonte */
+  }
+
+  /* Ocultar o texto do botão de modo para economizar espaço */
+  .mode-toggle:not(.no-text) span:last-child {
+    /* Seleciona o texto, não o ícone */
+    display: none;
+  }
+
+  .mode-toggle:hover {
+    padding: 5px 8px; /* Manter padding no hover para área clicável */
+  }
+
+  .header-icons {
+    gap: 8px; /* Reduzir espaçamento entre ícones sociais */
+  }
+
+  .icon-box {
+    width: 28px; /* Reduzir tamanho dos ícones sociais */
+    height: 28px;
+    font-size: 0.9em; /* Reduzir tamanho do ícone Font Awesome */
+  }
+}
+
+/* --- Media Query para telas menores (já existentes ou a serem ajustadas) --- */
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column; /* Empilha os itens do header */
+    height: auto; /* Altura automática */
+    padding: 15px 20px; /* Ajustar padding */
+  }
+
+  .site-header .header-left {
+    margin-bottom: 15px; /* Espaço entre logo e nav */
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap; /* Permite que os links quebrem linha */
+    justify-content: center;
+    gap: 1.5rem; /* Ajustar gap para mobile */
+    margin-bottom: 15px; /* Espaço entre nav e header-right */
+  }
+
+  .header-right {
+    flex-wrap: wrap; /* Permite que os itens do lado direito quebrem linha */
+    justify-content: center;
+    gap: 10px; /* Ajustar gap */
+  }
+
+  .language-selector-buttons {
+    margin-right: 0; /* Remover margem extra */
+    margin-bottom: 10px; /* Espaço entre seletor e modo */
+  }
+
+  .mode-toggle span:last-child {
+    /* Garantir que o texto do modo esteja oculto */
+    display: none;
+  }
+}
+
+/* --- Ajuste para o body para compensar o header fixo --- */
+body {
+  padding-top: var(
+    --header-height
+  ); /* Garante que o conteúdo não fique por baixo do header */
+}
+
+/* --- Dark Mode adjustments for header (se você já tem, mantenha) --- */
+[data-theme="dark"] .site-header {
+  background: rgba(40, 42, 54, 0.95);
+  border-bottom: rgba(98, 114, 164, 0.8);
+}
+
+[data-theme="dark"] .site-header .header-left a,
+[data-theme="dark"] .main-nav li a,
+[data-theme="dark"] .mode-toggle,
+[data-theme="dark"] .icon-box {
+  color: var(--color-text-primary-dark);
+}
+
+[data-theme="dark"] .main-nav li a:hover {
+  color: var(--color-text-secondary-dark);
+  background: rgba(98, 114, 164, 0.1);
+}
+
+[data-theme="dark"] .mode-toggle:hover {
+  background: rgba(98, 114, 164, 0.1);
+}
+
+[data-theme="dark"] .icon-box {
+  border-color: var(--color-border-dark);
+}
+
+[data-theme="dark"] .icon-box:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
