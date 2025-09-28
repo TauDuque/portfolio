@@ -73,6 +73,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleMode }) => {
             href="https://github.com/TauDuque"
             rel="noopener noreferrer"
             className="icon-box"
+            target="_blank"
           >
             <i className="fa-brands fa-github"></i>{" "}
             {/* Ícone Font Awesome para GitHub */}
@@ -82,12 +83,17 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleMode }) => {
             href="https://linkedin.com/in/tau-ribeiro"
             rel="noopener noreferrer"
             className="icon-box"
+            target="_blank"
           >
             <i className="fa-brands fa-linkedin-in"></i>{" "}
             {/* Ícone Font Awesome para LinkedIn */}
           </a>
           {/* Ícone do Email (Gmail) */}
-          <a href="mailto:duque.tauribeiro@gmail.com" className="icon-box">
+          <a
+            href="mailto:duque.tauribeiro@gmail.com"
+            className="icon-box"
+            target="_blank"
+          >
             <i className="fa-solid fa-envelope"></i>{" "}
             {/* Ícone Font Awesome para Email */}
           </a>
