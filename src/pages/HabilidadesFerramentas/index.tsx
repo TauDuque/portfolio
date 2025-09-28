@@ -3,6 +3,7 @@ import React from "react";
 import "./styles.css"; // Importa os estilos específicos da página
 import TypescriptIconLight from "../../assets/images/ts-light.png";
 import TypescriptIconDark from "../../assets/images/ts-dark.png";
+import { useTranslation } from "../../hooks/useTranslation"; // Importe seu hook de tradução aqui
 
 interface HabilidadesFerramentasProps {
   isDarkMode: boolean;
@@ -11,39 +12,36 @@ interface HabilidadesFerramentasProps {
 const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
   isDarkMode,
 }) => {
+  const { t } = useTranslation(); // Inicializa o hook de tradução
+
   return (
     <div className="habilidades-ferramentas-container">
       <section className="habilidades-ferramentas-section">
         <h1 className="habilidades-ferramentas-title">
-          Habilidades & Ferramentas
+          {t("skills_page.main_title")}
         </h1>
         <p className="habilidades-ferramentas-intro">
-          Meu arsenal técnico e minhas competências interpessoais me permitem
-          construir soluções robustas e colaborar de forma eficaz em equipes
-          ágeis. Abaixo, detalho as tecnologias que domino e as soft skills que
-          me definem como profissional.
+          {t("skills_page.intro_paragraph")}
         </p>
       </section>
 
       <section className="habilidades-ferramentas-section">
         <h2 className="habilidades-ferramentas-subtitle">
-          Habilidades Técnicas
+          {t("skills_page.technical_skills_title")}
         </h2>
         <div className="skills-grid">
           {/* Linguagens */}
           <div className="skill-category">
             <h3>
-              <i className="fas fa-code"></i> Linguagens
+              <i className="fas fa-code"></i>{" "}
+              {t("skills_page.languages_category")}
             </h3>
             <ul>
               <li>
                 <i className="fa-brands fa-js"></i>
                 <div>
-                  <strong>JavaScript (ES6+)</strong>
-                  <p>
-                    Base para aplicações web modernas, com foco em performance e
-                    reatividade.
-                  </p>
+                  <strong>{t("skills_page.js_title")}</strong>
+                  <p>{t("skills_page.js_description")}</p>
                 </div>
               </li>
               <li>
@@ -53,29 +51,22 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
                   className="skill-img-icon"
                 />
                 <div>
-                  <strong>TypeScript</strong>
-                  <p>
-                    Aplico tipagem estática para aumentar a robustez e a
-                    manutenibilidade do código, garantindo projetos mais seguros
-                    e escaláveis.
-                  </p>
+                  <strong>{t("skills_page.ts_title")}</strong>
+                  <p>{t("skills_page.ts_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-brands fa-html5"></i>
                 <div>
-                  <strong>HTML5</strong>
-                  <p>Estruturação semântica e acessível de conteúdo web.</p>
+                  <strong>{t("skills_page.html5_title")}</strong>
+                  <p>{t("skills_page.html5_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-brands fa-css3-alt"></i>
                 <div>
-                  <strong>CSS3</strong>
-                  <p>
-                    Estilização moderna e responsiva, com foco em design e
-                    experiência do usuário.
-                  </p>
+                  <strong>{t("skills_page.css3_title")}</strong>
+                  <p>{t("skills_page.css3_description")}</p>
                 </div>
               </li>
             </ul>
@@ -84,81 +75,57 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
           {/* Front-end */}
           <div className="skill-category">
             <h3>
-              <i className="fas fa-desktop"></i> Front-end
+              <i className="fas fa-desktop"></i>{" "}
+              {t("skills_page.frontend_category")}
             </h3>
             <ul>
               <li>
                 <i className="fa-brands fa-react"></i>
                 <div>
-                  <strong>React.js</strong>
-                  <p>
-                    Desenvolvo interfaces de usuário interativas e reativas,
-                    utilizando hooks e o ecossistema React para criar
-                    experiências fluidas e performáticas.
-                  </p>
+                  <strong>{t("skills_page.react_title")}</strong>
+                  <p>{t("skills_page.react_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-layer-group"></i>
                 <div>
-                  <strong>Next.js</strong>
-                  <p>
-                    Utilizo para construir aplicações React com renderização no
-                    servidor (SSR), geração de sites estáticos (SSG) e
-                    otimizações de performance, garantindo SEO e UX de alto
-                    nível.
-                  </p>
+                  <strong>{t("skills_page.nextjs_title")}</strong>
+                  <p>{t("skills_page.nextjs_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-atom"></i>
                 <div>
-                  <strong>Redux</strong>
-                  <p>
-                    Gerenciamento de estado complexo e previsível em aplicações
-                    de grande escala.
-                  </p>
+                  <strong>{t("skills_page.redux_title")}</strong>
+                  <p>{t("skills_page.redux_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-palette"></i>
                 <div>
-                  <strong>Styled Components</strong>
-                  <p>
-                    Estilização de componentes com CSS-in-JS, promovendo
-                    modularidade e reusabilidade.
-                  </p>
+                  <strong>{t("skills_page.styled_components_title")}</strong>
+                  <p>{t("skills_page.styled_components_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-cloud-arrow-up"></i>
                 <div>
-                  <strong>Axios</strong>
-                  <p>
-                    Cliente HTTP para requisições assíncronas, facilitando a
-                    comunicação com APIs.
-                  </p>
+                  <strong>{t("skills_page.axios_title")}</strong>
+                  <p>{t("skills_page.axios_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-cube"></i>
                 <div>
-                  <strong>Material UI</strong>
-                  <p>
-                    Criação de interfaces com componentes pré-construídos e
-                    aderentes ao Material Design.
-                  </p>
+                  <strong>{t("skills_page.material_ui_title")}</strong>
+                  <p>{t("skills_page.material_ui_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-wind"></i>
                 <div>
-                  <strong>Tailwind CSS</strong>
-                  <p>
-                    Desenvolvo interfaces rapidamente com um framework CSS
-                    utility-first, garantindo designs consistentes, responsivos
-                    e altamente personalizáveis.
-                  </p>
+                  <strong>{t("skills_page.tailwind_css_title")}</strong>
+                  <p>{t("skills_page.tailwind_css_description")}</p>
                 </div>
               </li>
             </ul>
@@ -167,138 +134,102 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
           {/* Back-end */}
           <div className="skill-category">
             <h3>
-              <i className="fas fa-server"></i> Back-end
+              <i className="fas fa-server"></i>{" "}
+              {t("skills_page.backend_category")}
             </h3>
             <ul>
               <li>
                 <i className="fa-brands fa-node-js"></i>
                 <div>
-                  <strong>Node.js</strong>
-                  <p>
-                    Construo APIs RESTful robustas e escaláveis, gerenciando
-                    lógica de negócios e integração com bancos de dados de forma
-                    eficiente e segura.
-                  </p>
+                  <strong>{t("skills_page.nodejs_title")}</strong>
+                  <p>{t("skills_page.nodejs_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-network-wired"></i>
                 <div>
-                  <strong>Express.js</strong>
-                  <p>
-                    Framework para desenvolvimento rápido de APIs e servidores
-                    web em Node.js.
-                  </p>
+                  <strong>{t("skills_page.expressjs_title")}</strong>
+                  <p>{t("skills_page.expressjs_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-database"></i>
                 <div>
-                  <strong>TypeORM</strong>
-                  <p>
-                    ORM para TypeScript e JavaScript, facilitando a interação
-                    com bancos de dados relacionais e não relacionais.
-                  </p>
+                  <strong>{t("skills_page.typeorm_title")}</strong>
+                  <p>{t("skills_page.typeorm_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-bolt"></i>
                 <div>
-                  <strong>Prisma</strong>
-                  <p>
-                    Utilizo como ORM de nova geração para interagir com bancos
-                    de dados de forma segura e eficiente, com tipagem completa e
-                    migrações automatizadas.
-                  </p>
+                  <strong>{t("skills_page.prisma_title")}</strong>
+                  <p>{t("skills_page.prisma_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-hourglass-half"></i>
                 <div>
-                  <strong>Bull</strong>
-                  <p>
-                    Gerenciamento de filas de tarefas em segundo plano para
-                    processamento assíncrono.
-                  </p>
+                  <strong>{t("skills_page.bull_title")}</strong>
+                  <p>{t("skills_page.bull_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-table"></i>
                 <div>
-                  <strong>Sequelize</strong>
-                  <p>
-                    ORM para Node.js, com suporte a múltiplos bancos de dados
-                    relacionais.
-                  </p>
+                  <strong>{t("skills_page.sequelize_title")}</strong>
+                  <p>{t("skills_page.sequelize_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-exchange-alt"></i>
                 <div>
-                  <strong>RESTful APIs</strong>
-                  <p>
-                    Criação e consumo de APIs seguindo os princípios REST para
-                    comunicação eficiente entre sistemas.
-                  </p>
+                  <strong>{t("skills_page.restful_apis_title")}</strong>
+                  <p>{t("skills_page.restful_apis_description")}</p>
                 </div>
               </li>
             </ul>
           </div>
 
-          {/* Bases de Dados - MOVIDO PARA CIMA */}
+          {/* Bases de Dados */}
           <div className="skill-category">
             <h3>
-              <i className="fas fa-hdd"></i> Bases de Dados
+              <i className="fas fa-hdd"></i>{" "}
+              {t("skills_page.databases_category")}
             </h3>
             <ul>
               <li>
                 <i className="fa-solid fa-leaf"></i>
                 <div>
-                  <strong>MongoDB</strong>
-                  <p>
-                    Banco de dados NoSQL flexível e escalável para dados não
-                    estruturados.
-                  </p>
+                  <strong>{t("skills_page.mongodb_title")}</strong>
+                  <p>{t("skills_page.mongodb_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-database"></i>
                 <div>
-                  <strong>PostgreSQL</strong>
-                  <p>
-                    Banco de dados relacional robusto, com foco em integridade e
-                    conformidade SQL.
-                  </p>
+                  <strong>{t("skills_page.postgresql_title")}</strong>
+                  <p>{t("skills_page.postgresql_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-database"></i>
                 <div>
-                  <strong>MySQL</strong>
-                  <p>
-                    Banco de dados relacional amplamente utilizado, conhecido
-                    por sua performance e confiabilidade.
-                  </p>
+                  <strong>{t("skills_page.mysql_title")}</strong>
+                  <p>{t("skills_page.mysql_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-memory"></i>
                 <div>
-                  <strong>Redis</strong>
-                  <p>
-                    Armazenamento de dados em memória, ideal para cache e filas
-                    de mensagens.
-                  </p>
+                  <strong>{t("skills_page.redis_title")}</strong>
+                  <p>{t("skills_page.redis_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-cloud"></i>
                 <div>
-                  <strong>Dynamo DB</strong>
-                  <p>
-                    Banco de dados NoSQL totalmente gerenciado e escalável da
-                    AWS.
-                  </p>
+                  <strong>{t("skills_page.dynamodb_title")}</strong>
+                  <p>{t("skills_page.dynamodb_description")}</p>
                 </div>
               </li>
             </ul>
@@ -307,56 +238,43 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
           {/* Ferramentas & DevOps */}
           <div className="skill-category">
             <h3>
-              <i className="fas fa-tools"></i> Ferramentas & DevOps
+              <i className="fas fa-tools"></i>{" "}
+              {t("skills_page.tools_devops_category")}
             </h3>
             <ul>
               <li>
                 <i className="fa-brands fa-github"></i>
                 <div>
-                  <strong>GitHub</strong>
-                  <p>
-                    Controle de versão e colaboração em projetos de software.
-                  </p>
+                  <strong>{t("skills_page.github_title")}</strong>
+                  <p>{t("skills_page.github_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-brands fa-docker"></i>
                 <div>
-                  <strong>Docker</strong>
-                  <p>
-                    Containerização de aplicações para ambientes de
-                    desenvolvimento e produção consistentes.
-                  </p>
+                  <strong>{t("skills_page.docker_title")}</strong>
+                  <p>{t("skills_page.docker_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-bug"></i>
                 <div>
-                  <strong>SonarQube</strong>
-                  <p>
-                    Análise estática de código para garantir qualidade e
-                    segurança.
-                  </p>
+                  <strong>{t("skills_page.sonarqube_title")}</strong>
+                  <p>{t("skills_page.sonarqube_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-vial"></i>
                 <div>
-                  <strong>Jest</strong>
-                  <p>
-                    Framework de testes JavaScript para garantir a
-                    funcionalidade e robustez do código.
-                  </p>
+                  <strong>{t("skills_page.jest_title")}</strong>
+                  <p>{t("skills_page.jest_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-arrows-rotate"></i>
                 <div>
-                  <strong>CI/CD</strong>
-                  <p>
-                    Implementação de pipelines de Integração Contínua e Entrega
-                    Contínua para automação de builds e deploys.
-                  </p>
+                  <strong>{t("skills_page.ci_cd_title")}</strong>
+                  <p>{t("skills_page.ci_cd_description")}</p>
                 </div>
               </li>
             </ul>
@@ -365,17 +283,15 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
           {/* Plataformas Cloud */}
           <div className="skill-category">
             <h3>
-              <i className="fas fa-cloud"></i> Plataformas Cloud
+              <i className="fas fa-cloud"></i>{" "}
+              {t("skills_page.cloud_platforms_category")}
             </h3>
             <ul>
               <li>
                 <i className="fa-brands fa-microsoft"></i>
                 <div>
-                  <strong>Azure</strong>
-                  <p>
-                    Utilização de serviços de nuvem para hospedagem, banco de
-                    dados e outras soluções.
-                  </p>
+                  <strong>{t("skills_page.azure_title")}</strong>
+                  <p>{t("skills_page.azure_description")}</p>
                 </div>
               </li>
             </ul>
@@ -384,49 +300,36 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
           {/* Metodologias */}
           <div className="skill-category">
             <h3>
-              <i className="fas fa-project-diagram"></i> Metodologias
+              <i className="fas fa-project-diagram"></i>{" "}
+              {t("skills_page.methodologies_category")}
             </h3>
             <ul>
               <li>
                 <i className="fa-solid fa-people-arrows"></i>
                 <div>
-                  <strong>Agile (Scrum/Kanban)</strong>
-                  <p>
-                    Aplicação de metodologias ágeis para gerenciamento de
-                    projetos e entregas iterativas.
-                  </p>
+                  <strong>{t("skills_page.agile_title")}</strong>
+                  <p>{t("skills_page.agile_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-broom"></i>
                 <div>
-                  <strong>Clean Code</strong>
-                  <p>
-                    Escrita de código legível, manutenível e eficiente, seguindo
-                    as melhores práticas.
-                  </p>
+                  <strong>{t("skills_page.clean_code_title")}</strong>
+                  <p>{t("skills_page.clean_code_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-cubes"></i>
                 <div>
-                  <strong>DDD (Domain-Driven Design)</strong>
-                  <p>
-                    Aplico princípios de DDD para modelar domínios complexos,
-                    garantindo que a lógica de negócio esteja no centro do
-                    desenvolvimento e seja compreendida por toda a equipe.
-                  </p>
+                  <strong>{t("skills_page.ddd_title")}</strong>
+                  <p>{t("skills_page.ddd_description")}</p>
                 </div>
               </li>
               <li>
                 <i className="fa-solid fa-sitemap"></i>
                 <div>
-                  <strong>Clean Architecture</strong>
-                  <p>
-                    Estruturo aplicações com uma arquitetura limpa e
-                    desacoplada, promovendo a testabilidade, manutenibilidade e
-                    a independência de frameworks e bancos de dados.
-                  </p>
+                  <strong>{t("skills_page.clean_architecture_title")}</strong>
+                  <p>{t("skills_page.clean_architecture_description")}</p>
                 </div>
               </li>
             </ul>
@@ -435,103 +338,84 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
       </section>
 
       <section className="habilidades-ferramentas-section">
-        <h2 className="habilidades-ferramentas-subtitle">Soft Skills</h2>
+        <h2 className="habilidades-ferramentas-subtitle">
+          {t("skills_page.soft_skills_title")}
+        </h2>
         <div className="soft-skills-grid">
           <div className="soft-skill-item">
             <i className="fa-solid fa-comments"></i>
-            <h4>Comunicação</h4>
-            <p>
-              Facilito a troca de informações e ideias complexas, garantindo
-              alinhamento e clareza em projetos.
-            </p>
+            <h4>{t("skills_page.communication_title")}</h4>
+            <p>{t("skills_page.communication_description")}</p>
           </div>
           <div className="soft-skill-item">
             <i className="fa-solid fa-handshake"></i>
-            <h4>Trabalho em Equipe</h4>
-            <p>
-              Colaboro ativamente, promovendo um ambiente de respeito e
-              cooperação para alcançar objetivos comuns.
-            </p>
+            <h4>{t("skills_page.teamwork_title")}</h4>
+            <p>{t("skills_page.teamwork_description")}</p>
           </div>
           <div className="soft-skill-item">
             <i className="fa-solid fa-lightbulb"></i>
-            <h4>Resolução de Problemas</h4>
-            <p>
-              Abordo desafios com criatividade e pensamento analítico, buscando
-              soluções eficazes e inovadoras.
-            </p>
+            <h4>{t("skills_page.problem_solving_title")}</h4>
+            <p>{t("skills_page.problem_solving_description")}</p>
           </div>
-          {/* Adaptabilidade - MOVIDO PARA CIMA */}
           <div className="soft-skill-item">
             <i className="fa-solid fa-shuffle"></i>
-            <h4>Adaptabilidade</h4>
-            <p>
-              Ajusto-me rapidamente a novas tecnologias, metodologias e mudanças
-              de requisitos, mantendo a produtividade.
-            </p>
+            <h4>{t("skills_page.adaptability_title")}</h4>
+            <p>{t("skills_page.adaptability_description")}</p>
           </div>
           <div className="soft-skill-item">
             <i className="fa-solid fa-user-graduate"></i>
-            <h4>Mentoria</h4>
-            <p>
-              Apoio o desenvolvimento de colegas, compartilhando conhecimento e
-              promovendo o crescimento da equipe.
-            </p>
+            <h4>{t("skills_page.mentorship_title")}</h4>
+            <p>{t("skills_page.mentorship_description")}</p>
           </div>
           <div className="soft-skill-item">
             <i className="fa-solid fa-rocket"></i>
-            <h4>Proatividade</h4>
-            <p>
-              Tomo a iniciativa para identificar oportunidades de melhoria e
-              antecipar desafios, agindo de forma independente.
-            </p>
+            <h4>{t("skills_page.proactivity_title")}</h4>
+            <p>{t("skills_page.proactivity_description")}</p>
           </div>
           <div className="soft-skill-item">
             <i className="fa-solid fa-magnifying-glass"></i>
-            <h4>Atenção ao Detalhe</h4>
-            <p>
-              Garanto a precisão e a qualidade em cada linha de código e em cada
-              interação do usuário.
-            </p>
+            <h4>{t("skills_page.attention_to_detail_title")}</h4>
+            <p>{t("skills_page.attention_to_detail_description")}</p>
           </div>
         </div>
       </section>
 
       <section className="habilidades-ferramentas-section">
         <h2 className="habilidades-ferramentas-subtitle">
-          Formação e Cursos Relevantes
+          {t("skills_page.education_courses_title")}
         </h2>
         <ul className="courses-list">
           <li>
-            <i className="fa-solid fa-book-open"></i> Licenciado em Letras
-            Portuguesas - USP - Universidade de São Paulo
+            <i className="fa-solid fa-book-open"></i>{" "}
+            {t("skills_page.education_usp")}
           </li>
           <li>
-            <i className="fa-solid fa-graduation-cap"></i> Ignite - Rocketseat
-            (2020)
+            <i className="fa-solid fa-graduation-cap"></i>{" "}
+            {t("skills_page.course_ignite")}
           </li>
           <li>
-            <i className="fa-solid fa-graduation-cap"></i> CS50 - EdX.org (2021)
+            <i className="fa-solid fa-graduation-cap"></i>{" "}
+            {t("skills_page.course_cs50")}
           </li>
           <li>
-            <i className="fa-solid fa-graduation-cap"></i> Fundamentos de
-            JavaScript Funcional - Cod3r (2020)
+            <i className="fa-solid fa-graduation-cap"></i>{" "}
+            {t("skills_page.course_js_functional")}
           </li>
           <li>
-            <i className="fa-solid fa-graduation-cap"></i> 20 JavaScript Web
-            Projects Udemy (2020)
+            <i className="fa-solid fa-graduation-cap"></i>{" "}
+            {t("skills_page.course_js_projects")}
           </li>
           <li>
-            <i className="fa-solid fa-graduation-cap"></i> freeCodeCamp -
-            JavaScript Algorithms and Data Structures (2020)
+            <i className="fa-solid fa-graduation-cap"></i>{" "}
+            {t("skills_page.course_freecodecamp")}
           </li>
           <li>
-            <i className="fa-solid fa-graduation-cap"></i> Codecademy - Learn
-            JavaScript (2021)
+            <i className="fa-solid fa-graduation-cap"></i>{" "}
+            {t("skills_page.course_codecademy")}
           </li>
           <li>
-            <i className="fa-solid fa-graduation-cap"></i> MDN Web Docs - Guia
-            de JavaScript (2021)
+            <i className="fa-solid fa-graduation-cap"></i>{" "}
+            {t("skills_page.course_mdn")}
           </li>
         </ul>
       </section>
