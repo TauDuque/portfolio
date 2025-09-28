@@ -1,5 +1,5 @@
 // src/pages/HomePageContent.tsx
-import React from "react";
+
 import { useTranslation } from "../../hooks/useTranslation";
 
 const HomePageContent = () => {
