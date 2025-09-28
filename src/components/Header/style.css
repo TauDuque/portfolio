@@ -48,3 +48,13 @@
   border-color: var(--color-accent-dark);
   color: var(--color-background-dark);
 }
+
+.site-header {
+  /* Propriedades existentes */
+  /* ... */
+  position: fixed; /* Adicione esta linha */
+  top: 0; /* Adicione esta linha */
+  width: 100%; /* Adicione esta linha */
+  z-index: 1000; /* Adicione esta linha para garantir que fique acima de tudo */
+  /* ... */
+}

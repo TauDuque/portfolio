@@ -12,6 +12,10 @@
         "language_english": "English",
         "language_spanish": "Spanish"
     },
+    "app_page": {
+        "hero_tagline": "Full Stack Developer",
+        "hero_illustration_alt": "Illustration of a desk setup with a laptop showing 'Hello World', framed pictures, a camera, and a plant."
+    },
     "hero_section": {
         "tagline": "Full Stack Developer",
         "subtitle": "Transforming ideas into robust and scalable digital solutions."

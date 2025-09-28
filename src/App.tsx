@@ -12,6 +12,7 @@ import GaleriaDeArteDetalhes from "./pages/Projetos/galeria-arte-detalhes";
 import ScrollToTop from "./components/ScrollToTop";
 import APIMonitorDetalhes from "./pages/Projetos/api-monitor-detalhes";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import HomePageContent from "./pages/HomePageContent"; // <<< NOVO: Importe o componente HomePageContent
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -40,18 +41,7 @@ function App() {
           {/* Rota para a página inicial (Home) */}
           <Route
             path="/"
-            element={
-              <main className="hero-section">
-                <div className="illustration-wrapper">
-                  <img
-                    src="/src/assets/images/ac14aa08-da0d-4144-950e-4c29d991e354.png"
-                    alt="Illustration of a desk setup with a laptop showing 'Hello World', framed pictures, a camera, and a plant."
-                    className="main-illustration-placeholder"
-                  />
-                </div>
-                <h1 className="hero-tagline">Desenvolvedor Full Stack</h1>
-              </main>
-            }
+            element={<HomePageContent />} // <<< ALTERADO: Agora renderiza o novo componente
           />
           {/* <<< AQUI ESTÁ A DEFINIÇÃO DA ROTA PARA A PÁGINA "SOBRE MIM" */}
           <Route path="/sobre-mim" element={<SobreMim />} />
