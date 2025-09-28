@@ -52,6 +52,8 @@
 html,
 body {
   height: 100%; /* Garante que o corpo se estenda por toda a altura da viewport */
+
+  padding-top: var(--header-height); /* Adicione esta linha */
 }
 
 body {
