@@ -1,23 +1,23 @@
 // src/pages/Contato/index.tsx
 import React from "react";
 import "./style.css"; // Importa os estilos específicos da página
+// Importe seu hook de tradução aqui, por exemplo:
+import { useTranslation } from "../../hooks/useTranslation"; // Exemplo usando react-i18next
 
 const Contato: React.FC = () => {
+  const { t } = useTranslation(); // Inicializa o hook de tradução
+
   return (
     <div className="contact-container">
       <section className="contact-section">
-        <h1 className="contact-title">Vamos Conectar</h1>
-        <p className="contact-intro">
-          Olá! Fico feliz que você queira entrar em contato. Posso me comunicar
-          fluentemente em Português, Inglês e Espanhol, então sinta-se à vontade
-          para escolher o idioma de sua preferência.
-        </p>
+        <h1 className="contact-title">{t("contact_page.title")}</h1>
+        <p className="contact-intro">{t("contact_page.intro")}</p>
 
         <div className="contact-info-grid">
           {/* Email */}
           <div className="contact-item">
             <i className="fa-solid fa-envelope"></i>
-            <h4>Email</h4>
+            <h4>{t("contact_page.email_label")}</h4>
             <a
               href="mailto:duque.tauribeiro@gmail.com"
               rel="noopener noreferrer"
@@ -29,11 +29,10 @@ const Contato: React.FC = () => {
           {/* LinkedIn */}
           <div className="contact-item">
             <i className="fa-brands fa-linkedin"></i>
-            <h4>LinkedIn</h4>
+            <h4>{t("contact_page.linkedin_label")}</h4>
             <a
               href="https://linkedin.com/in/tau-ribeiro"
               rel="noopener noreferrer"
-              target="_blank"
             >
               linkedin.com/in/tau-ribeiro
             </a>
@@ -42,13 +41,8 @@ const Contato: React.FC = () => {
           {/* GitHub */}
           <div className="contact-item">
             <i className="fa-brands fa-github"></i>
-            <h4>GitHub</h4>
-            {/* ATENÇÃO: Substitua "https://github.com/seu-usuario" pelo seu link real do GitHub */}
-            <a
-              href="https://github.com/TauDuque"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <h4>{t("contact_page.github_label")}</h4>
+            <a href="https://github.com/TauDuque" rel="noopener noreferrer">
               github.com/TauDuque
             </a>
           </div>
@@ -56,15 +50,12 @@ const Contato: React.FC = () => {
           {/* Localização */}
           <div className="contact-item">
             <i className="fa-solid fa-location-dot"></i>
-            <h4>Localização</h4>
-            <span>Valencia, Espanha</span>
+            <h4>{t("contact_page.location_label")}</h4>
+            <span>{t("contact_page.location_value")}</span>
           </div>
         </div>
 
-        <p className="contact-cta-text">
-          Interessado em colaborar ou discutir oportunidades? Será um prazer
-          conectar.
-        </p>
+        <p className="contact-cta-text">{t("contact_page.cta_text")}</p>
       </section>
     </div>
   );

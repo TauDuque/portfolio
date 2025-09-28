@@ -19,12 +19,22 @@
     "about_page": {
         "profile_alt": "Tauan Ribeiro - Full Stack Developer",
         "title": "Tauan Ribeiro: Full Stack JavaScript Developer",
-        "subtitle": "Practical Solutions and Continuous Growth",
+        "subtitle": "Continuous Growth and Concrete Results",
         "paragraph1": "As a Full Stack JavaScript Developer with 5 years of experience, I am passionate about transforming complex ideas into scalable and high-performance web applications. My expertise spans the JavaScript ecosystem, with proficiency in Node.js, Express.js, React.js, and Next.js, and an intrinsic passion for problem-solving and creating efficient and elegant solutions.",
         "paragraph2": "My journey in the world of technology is marked by a successful transition from a decade of experience in Humanities, including a degree in Literature from USP, translation, editing, and teaching. This background has equipped me with a valuable skill set: meticulous attention to detail, essential for code quality and debugging; clear and effective communication, fundamental for team collaboration and understanding requirements; and sharp analytical thinking to unravel complex challenges. This trajectory demonstrates my remarkable capacity for continuous learning, adaptability, and resilience in the face of new horizons.",
         "paragraph3": "What motivates me most in software development is the endless possibilities that arise when starting to code, when creating a logic or a function. I love the freedom to explore diverse approaches and creative solutions for the same problem, always seeking the most optimized path. I am a great enthusiast of the development community and believe this is the strong point of our profession. I highly value how knowledge, solutions, and methods are shared openly and unrestricted, and how this dynamic drives the evolution of the community as a whole – a philosophy I seek to replicate in any work environment.",
         "paragraph4": "My curiosity drives me to explore the frontiers of technology. I am an active user of Artificial Intelligence, which I consider a powerful multiplier of productivity and knowledge, and I seek to deepen my studies in AI and Machine Learning. Furthermore, I follow the Blockchain universe with great interest, recognizing its growing impact and transformative potential.",
         "paragraph5": "Currently based in Valencia, Spain, where I have resided since 2022 and work remotely for a Brazilian company, I am seeking an opportunity that allows me to grow and evolve long-term. I have high expectations for my career and aspire to an environment where I can contribute significantly to the success of the team and the company, while continuing to enhance my skills and expand my impact. I am a focused professional, dedicated to productivity and the relentless pursuit of continuous improvements."
+    },
+    "contact_page": {
+        "title": "Let's Connect",
+        "intro": "Hello! I'm glad you want to get in touch. I can communicate fluently in Portuguese, English, and Spanish, so feel free to choose your preferred language.",
+        "email_label": "Email",
+        "linkedin_label": "LinkedIn",
+        "github_label": "GitHub",
+        "location_label": "Location",
+        "location_value": "Valencia, Spain",
+        "cta_text": "Interested in collaborating or discussing opportunities? I'd be happy to connect."
     },
     "project_details": {
         "api_monitor": {

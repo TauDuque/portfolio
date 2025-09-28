@@ -19,12 +19,22 @@
     "about_page": {
         "profile_alt": "Tauan Ribeiro - Desenvolvedor Full Stack",
         "title": "Tauan Ribeiro: Desenvolvedor Full Stack JavaScript",
-        "subtitle": "Soluções Práticas e Crescimento Contínuo",
+        "subtitle": "Crescimento Contínuo e Resultados Concretos",
         "paragraph1": "Como Desenvolvedor Full Stack JavaScript com 5 anos de experiência, sou apaixonado por transformar ideias complexas em aplicações web escaláveis e de alto desempenho. Minha expertise abrange o ecossistema JavaScript, com proficiência em Node.js, Express.js, React.js e Next.js, e uma paixão intrínseca pela resolução de problemas e pela criação de soluções eficientes e elegantes.",
         "paragraph2": "Minha jornada no mundo da tecnologia é marcada por uma transição bem-sucedida de uma década de experiência em Humanidades, incluindo formação em Letras pela USP, tradução, revisão e ensino. Essa base me equipou com um conjunto de habilidades valiosas: uma atenção meticulosa aos detalhes, essencial para a qualidade do código e depuração; uma comunicação clara e eficaz, fundamental para a colaboração em equipe e a compreensão de requisitos; e um pensamento analítico aguçado para desvendar desafios complexos. Essa trajetória demonstra minha notável capacidade de aprendizado contínuo, adaptabilidade e resiliência diante de novos horizontes.",
         "paragraph3": "O que mais me motiva no desenvolvimento de software é a infinidade de possibilidades que surgem ao iniciar um código, ao criar uma lógica ou uma função. Adoro a liberdade de explorar diversas abordagens e soluções criativas para um mesmo problema, sempre buscando o caminho mais otimizado. Sou um grande entusiasta da comunidade de desenvolvimento e acredito que este seja o ponto forte da nossa profissão. Valorizo muito a maneira como o compartilhamento de conhecimento, soluções e métodos é feito de maneira aberta e irrestrita, e como essa dinâmica impulsiona a evolução da comunidade como um todo – uma filosofia que busco replicar em qualquer ambiente de trabalho.",
         "paragraph4": "Minha curiosidade me impulsiona a explorar as fronteiras da tecnologia. Sou um usuário ativo de Inteligência Artificial, que considero um poderoso multiplicador de produtividade e conhecimento, e busco aprofundar meus estudos em IA e Machine Learning. Além disso, acompanho com grande interesse o universo Blockchain, reconhecendo seu impacto crescente e seu potencial transformador.",
         "paragraph5": "Atualmente estabelecido em Valência, Espanha, onde resido desde 2022 e trabalho remotamente para uma empresa brasileira, busco uma oportunidade que me permita crescer e evoluir a longo prazo. Tenho grandes expectativas para minha carreira e almejo um ambiente onde possa contribuir significativamente para o sucesso da equipe e da empresa, enquanto continuo a aprimorar minhas habilidades e a expandir meu impacto. Sou um profissional focado, dedicado à produtividade e à busca incessante por melhorias contínuas."
+    },
+    "contact_page": {
+        "title": "Vamos Conectar",
+        "intro": "Olá! Fico feliz que você queira entrar em contato. Posso me comunicar fluentemente em Português, Inglês e Espanhol, então sinta-se à vontade para escolher o idioma de sua preferência.",
+        "email_label": "Email",
+        "linkedin_label": "LinkedIn",
+        "github_label": "GitHub",
+        "location_label": "Localização",
+        "location_value": "Valencia, Espanha",
+        "cta_text": "Interessado em colaborar ou discutir oportunidades? Será um prazer conectar."
     },
     "project_details": {
         "api_monitor": {
