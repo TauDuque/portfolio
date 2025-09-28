@@ -21,6 +21,7 @@ const Contato: React.FC = () => {
             <a
               href="mailto:duque.tauribeiro@gmail.com"
               rel="noopener noreferrer"
+              target="_blank"
             >
               duque.tauribeiro@gmail.com
             </a>
@@ -33,6 +34,7 @@ const Contato: React.FC = () => {
             <a
               href="https://linkedin.com/in/tau-ribeiro"
               rel="noopener noreferrer"
+              target="_blank"
             >
               linkedin.com/in/tau-ribeiro
             </a>
@@ -42,7 +44,11 @@ const Contato: React.FC = () => {
           <div className="contact-item">
             <i className="fa-brands fa-github"></i>
             <h4>{t("contact_page.github_label")}</h4>
-            <a href="https://github.com/TauDuque" rel="noopener noreferrer">
+            <a
+              href="https://github.com/TauDuque"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               github.com/TauDuque
             </a>
           </div>
