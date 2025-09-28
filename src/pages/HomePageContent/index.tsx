@@ -9,7 +9,7 @@ const HomePageContent = () => {
     <main className="hero-section">
       <div className="illustration-wrapper">
         <img
-          src="/src/assets/images/ac14aa08-da0d-4144-950e-4c29d991e354.png"
+          src="/src/public/assets/images/ac14aa08-da0d-4144-950e-4c29d991e354.png"
           alt={t("app_page.hero_illustration_alt")}
           className="main-illustration-placeholder"
         />
