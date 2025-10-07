@@ -170,12 +170,14 @@
         "gallery_project": {
             "title": "Personal Art Gallery",
             "description": "Explore and connect with art in your own digital gallery. This project allows users to browse, search, and favorite works from the renowned collection of the Met Museum, with access to detailed information about artists and historical contexts. An immersive experience that unites technology and culture.",
+            "technologies": "React • TypeScript • Tailwind CSS • Redux",
             "details_button": "View Details",
             "screenshot_alt": "Main screenshot of the Personal Art Gallery project"
         },
         "api_monitor_project": {
             "title": "API Monitor",
             "description": "Ensure the stability of your applications with real-time API monitoring. This project allows you to configure periodic checks, view performance history, and receive email alerts in case of failures. It highlights the advanced use of queues with Bull and Redis, real-time communication with Socket.io, and a robust architecture in Docker/Nginx.",
+            "technologies": "Node.js • Express • Bull & Redis • Socket.io • Chart.js • Tailwind CSS • Docker • Nginx",
             "details_button": "View Details",
             "screenshot_alt": "Main screenshot of the API Monitor project"
         }

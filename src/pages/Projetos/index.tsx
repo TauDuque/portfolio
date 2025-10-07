@@ -33,6 +33,9 @@ const Projetos = () => {
           <p className="project-description">
             {t("projects_page.gallery_project.description")}
           </p>
+          <p className="project-technologies">
+            {t("projects_page.gallery_project.technologies")}
+          </p>
           <Link to="/projetos/galeria-de-arte" className="btn-details">
             {t("projects_page.gallery_project.details_button")}
           </Link>
@@ -64,6 +67,9 @@ const Projetos = () => {
           </h2>
           <p className="project-description">
             {t("projects_page.api_monitor_project.description")}
+          </p>
+          <p className="project-technologies">
+            {t("projects_page.api_monitor_project.technologies")}
           </p>
           <Link to="/projetos/api-monitor" className="btn-details">
             {t("projects_page.api_monitor_project.details_button")}

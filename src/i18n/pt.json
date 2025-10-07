@@ -170,12 +170,14 @@
         "gallery_project": {
             "title": "Galeria de Arte Pessoal",
             "description": "Explore e conecte-se com a arte em sua própria galeria digital. Este projeto permite aos usuários navegar, buscar e favoritar obras do renomado acervo do Museu Met, com acesso a informações detalhadas sobre artistas e contextos históricos. Uma experiência imersiva que une tecnologia e cultura.",
+            "technologies": "React • TypeScript • Tailwind CSS • Redux",
             "details_button": "Ver Detalhes",
             "screenshot_alt": "Screenshot principal do projeto Galeria de Arte Pessoal"
         },
         "api_monitor_project": {
             "title": "API Monitor",
             "description": "Garanta a estabilidade de suas aplicações com um monitoramento de APIs em tempo real. Este projeto permite configurar verificações periódicas, visualizar históricos de desempenho e receber alertas por e-mail em caso de falhas. Destaca o uso avançado de filas com Bull e Redis, comunicação em tempo real com Socket.io e uma robusta arquitetura em Docker/Nginx.",
+            "technologies": "Node.js • Express • Bull & Redis • Socket.io • Chart.js • Tailwind CSS • Docker • Nginx",
             "details_button": "Ver Detalhes",
             "screenshot_alt": "Screenshot principal do projeto API Monitor"
         }
