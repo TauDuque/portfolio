@@ -249,26 +249,27 @@
 
 /* Screenshot de desenvolvimento */
 .development-screenshot {
-  opacity: 0.7;
-  filter: grayscale(30%) sepia(20%) hue-rotate(200deg) saturate(80%);
+  opacity: 0.8;
+  filter: grayscale(15%) sepia(10%) hue-rotate(200deg) saturate(85%)
+    brightness(0.95);
   transition: all 0.3s ease;
 }
 
 .development-screenshot:hover {
-  opacity: 0.85;
-  filter: grayscale(10%) sepia(10%) hue-rotate(200deg) saturate(90%);
+  opacity: 0.9;
+  filter: grayscale(5%) sepia(5%) hue-rotate(200deg) saturate(95%) brightness(1);
 }
 
 [data-theme="dark"] .development-screenshot {
-  opacity: 0.6;
-  filter: grayscale(40%) sepia(30%) hue-rotate(200deg) saturate(70%)
-    brightness(0.8);
+  opacity: 0.75;
+  filter: grayscale(20%) sepia(15%) hue-rotate(200deg) saturate(80%)
+    brightness(0.9);
 }
 
 [data-theme="dark"] .development-screenshot:hover {
-  opacity: 0.75;
-  filter: grayscale(20%) sepia(20%) hue-rotate(200deg) saturate(80%)
-    brightness(0.9);
+  opacity: 0.85;
+  filter: grayscale(8%) sepia(8%) hue-rotate(200deg) saturate(90%)
+    brightness(0.95);
 }
 
 /* Ícone de construção */
