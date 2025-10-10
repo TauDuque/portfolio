@@ -220,3 +220,139 @@
     height: 200px; /* Ainda menor em telas muito pequenas */
   }
 }
+
+/* --- Estilos para Projeto em Desenvolvimento --- */
+
+/* Card de projeto em desenvolvimento */
+.project-in-development {
+  opacity: 0.85;
+  position: relative;
+}
+
+.project-in-development:hover {
+  transform: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Placeholder de desenvolvimento */
+.development-placeholder {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border: 2px dashed var(--color-accent-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-theme="dark"] .development-placeholder {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+/* Ícone de construção */
+.development-icon {
+  font-size: 5rem;
+  opacity: 0.6;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Container do título com badge */
+.project-title-with-badge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Badge de status */
+.status-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--color-accent-dark);
+  color: var(--color-background-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+[data-theme="dark"] .status-badge {
+  background-color: var(--color-accent-dark);
+  color: var(--color-background-dark);
+}
+
+/* Botão desabilitado */
+.btn-details.disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn-details.disabled:hover {
+  background-color: #cccccc;
+  transform: none;
+}
+
+[data-theme="dark"] .btn-details.disabled {
+  background-color: #555555;
+  color: #999999;
+}
+
+[data-theme="dark"] .btn-details.disabled:hover {
+  background-color: #555555;
+}
+
+/* Estilos adicionais de tecnologias */
+.project-technologies {
+  font-family: var(--font-family-primary);
+  font-size: 0.95em;
+  color: var(--color-accent-dark);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+[data-theme="dark"] .project-technologies {
+  color: var(--color-accent-dark);
+}
+
+/* Responsividade para badge */
+@media (max-width: 768px) {
+  .project-title-with-badge {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .status-badge {
+    font-size: 0.75rem;
+    padding: 5px 14px;
+  }
+
+  .development-icon {
+    font-size: 3rem;
+  }
+}

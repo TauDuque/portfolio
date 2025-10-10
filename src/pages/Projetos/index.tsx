@@ -76,6 +76,37 @@ const Projetos = () => {
           </Link>
         </div>
       </section>
+
+      {/* Card do Projeto 3: CurateLink - Em Desenvolvimento */}
+      <section className="project-card project-in-development">
+        {/* Área Visual para o Screenshot - AGORA DIRETAMENTE NO CARD */}
+        <div className="project-visual-area">
+          <div className="screenshot-placeholder development-placeholder">
+            <span className="development-icon">🚧</span>
+          </div>
+        </div>
+
+        {/* Área de Texto do Projeto - AGORA DIRETAMENTE NO CARD, ABAIXO DA IMAGEM */}
+        <div className="project-text-area">
+          <div className="project-title-with-badge">
+            <h2 className="project-title">
+              {t("projects_page.curatelink_project.title")}
+            </h2>
+            <span className="status-badge">
+              {t("projects_page.curatelink_project.status_badge")}
+            </span>
+          </div>
+          <p className="project-description">
+            {t("projects_page.curatelink_project.description")}
+          </p>
+          <p className="project-technologies">
+            {t("projects_page.curatelink_project.technologies")}
+          </p>
+          <button className="btn-details disabled" disabled>
+            {t("projects_page.curatelink_project.coming_soon")}
+          </button>
+        </div>
+      </section>
     </div>
   );
 };

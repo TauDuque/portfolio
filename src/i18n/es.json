@@ -180,6 +180,14 @@
             "technologies": "Node.js • Express • Bull & Redis • Socket.io • Chart.js • Tailwind CSS • Docker • Nginx",
             "details_button": "Ver Detalles",
             "screenshot_alt": "Captura de pantalla principal del proyecto API Monitor"
+        },
+        "curatelink_project": {
+            "title": "CurateLink",
+            "status_badge": "En Desarrollo",
+            "description": "Una plataforma inteligente para organizar y gestionar tus enlaces favoritos. Guarda, categoriza y encuentra fácilmente información valiosa que descubriste en internet, con un potente sistema de búsqueda contextual y una interfaz intuitiva para mantener todo organizado.",
+            "technologies": "Node.js • NestJS • Prisma • AWS Lambda • React",
+            "coming_soon": "Próximamente",
+            "screenshot_alt": "Proyecto CurateLink en desarrollo"
         }
     },
     "api_monitor_details_page": {
