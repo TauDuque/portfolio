@@ -81,9 +81,11 @@ const Projetos = () => {
       <section className="project-card project-in-development">
         {/* Área Visual para o Screenshot - AGORA DIRETAMENTE NO CARD */}
         <div className="project-visual-area">
-          <div className="screenshot-placeholder development-placeholder">
-            <span className="development-icon">🚧</span>
-          </div>
+          <img
+            src="/assets/images/curatelink_preview.png"
+            alt={t("projects_page.curatelink_project.screenshot_alt")}
+            className="project-screenshot development-screenshot"
+          />
         </div>
 
         {/* Área de Texto do Projeto - AGORA DIRETAMENTE NO CARD, ABAIXO DA IMAGEM */}
