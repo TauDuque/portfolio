@@ -63,7 +63,18 @@ function App() {
           />
         </Routes>
       </LanguageProvider>
-      <Analytics />
+      <Analytics
+        beforeSend={(event) => {
+          // Disfarça o endpoint para evitar bloqueadores
+          if (event.url) {
+            event.url = event.url.replace(
+              "vitals.vercel-insights.com",
+              "api/stats"
+            );
+          }
+          return event;
+        }}
+      />
     </>
   );
 }

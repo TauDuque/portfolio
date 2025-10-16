@@ -1,6 +1,10 @@
 {
     "rewrites": [
         {
+            "source": "/api/stats/:path*",
+            "destination": "https://vitals.vercel-insights.com/:path*"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }
