@@ -13,6 +13,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import APIMonitorDetalhes from "./pages/Projetos/api-monitor-detalhes";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import HomePageContent from "./pages/HomePageContent"; // <<< NOVO: Importe o componente HomePageContent
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -62,6 +63,7 @@ function App() {
           />
         </Routes>
       </LanguageProvider>
+      <Analytics />
     </>
   );
 }
