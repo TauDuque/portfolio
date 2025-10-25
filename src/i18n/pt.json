@@ -207,7 +207,7 @@
         "frontend_subtitle": "Frontend:",
         "frontend_tech_1": "React: Para uma interface de usuário responsiva e funcional, focada na clareza dos dados de monitoramento.",
         "frontend_tech_2": "Socket.IO Client: Habilita a comunicação bidirecional em tempo real com o backend, garantindo que o dashboard seja sempre atualizado.",
-        "frontend_tech_3": "Chart.js (ou similar): Para visualização de dados históricos de desempenho, como gráficos de latência e uptime.",
+        "frontend_tech_3": "Chart.js: Para visualização de dados históricos de desempenho, como gráficos de latência e uptime.",
         "frontend_tech_4": "Tailwind CSS: Para estilização rápida e consistente, mantendo o foco na funcionalidade e adaptabilidade.",
         "backend_infra_subtitle": "Backend & Infraestrutura:",
         "backend_infra_tech_1": "Node.js & Express.js: Construção de uma API RESTful para gerenciar as APIs monitoradas, configurações e interações com o banco de dados.",
