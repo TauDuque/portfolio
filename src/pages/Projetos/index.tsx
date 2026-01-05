@@ -27,9 +27,14 @@ const Projetos = () => {
 
         {/* Área de Texto do Projeto - AGORA DIRETAMENTE NO CARD, ABAIXO DA IMAGEM */}
         <div className="project-text-area">
-          <h2 className="project-title">
-            {t("projects_page.gallery_project.title")}
-          </h2>
+          <div className="project-title-with-badge">
+            <h2 className="project-title">
+              {t("projects_page.gallery_project.title")}
+            </h2>
+            <span className="status-badge">
+              {t("projects_page.gallery_project.status_badge")}
+            </span>
+          </div>
           <p className="project-description">
             {t("projects_page.gallery_project.description")}
           </p>
@@ -62,9 +67,14 @@ const Projetos = () => {
 
         {/* Área de Texto do Projeto - AGORA DIRETAMENTE NO CARD, ABAIXO DA IMAGEM */}
         <div className="project-text-area">
-          <h2 className="project-title">
-            {t("projects_page.api_monitor_project.title")}
-          </h2>
+          <div className="project-title-with-badge">
+            <h2 className="project-title">
+              {t("projects_page.api_monitor_project.title")}
+            </h2>
+            <span className="status-badge">
+              {t("projects_page.api_monitor_project.status_badge")}
+            </span>
+          </div>
           <p className="project-description">
             {t("projects_page.api_monitor_project.description")}
           </p>
