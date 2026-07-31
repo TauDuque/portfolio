@@ -98,65 +98,61 @@ a:hover {
     Estilos da Seção Hero
 */
 .hero-section {
-  flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço vertical restante */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza o conteúdo verticalmente */
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
-  padding: var(--spacing-lg) var(--spacing-md); /* Preenchimento vertical e horizontal */
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-md);
   text-align: center;
-  overflow: hidden; /* Controla o overflow das linhas que se estendem por toda a tela */
+  overflow: hidden;
+  gap: 0;
 }
 
 .illustration-wrapper {
+  --desk-line-position: 76%;
   max-width: min(92vw, 1100px);
   width: fit-content;
-  margin-bottom: 24px;
-  position: relative; /* Para posicionar as linhas que se estendem */
-
-  /* A imagem em si pode ter preenchimento/bordas internas, 
-       mas este wrapper a centraliza e controla seu tamanho geral. */
-
-  /* Fundo para a imagem placeholder para combinar com os espaços vazios da ilustração */
+  position: relative;
   background-color: var(--color-illustration-bg);
-  border: 2px solid rgba(221, 228, 233, 0.1); /* Borda muito mais sutil */
-  border-radius: 8px; /* Cantos ligeiramente arredondados */
-  overflow: visible; /* Permite que as linhas se estendam além dos limites */
+  border: 2px solid rgba(221, 228, 233, 0.1);
+  border-radius: 8px;
+  overflow: visible;
 }
 
-/* Linhas horizontais que se estendem da mesa para o resto da tela */
+/* Linhas horizontais alinhadas à borda superior da mesa na ilustração */
 .illustration-wrapper::before {
   content: "";
   position: absolute;
-  top: calc(82% - 42.5px); /* Voltando para a posição anterior */
-  left: -100vw; /* Se estende por toda a largura da tela */
-  width: 100vw; /* Ocupa toda a largura da viewport */
-  height: 1.5px; /* Aumentado para 1.5px (meio pixel mais grosso) */
+  top: var(--desk-line-position);
+  left: -100vw;
+  width: 100vw;
+  height: 1.5px;
   background-color: var(--color-text-primary);
-  opacity: 0.8; /* Aumentado para 0.8 (mais escuro) */
+  opacity: 0.8;
   z-index: -1;
 }
 
 .illustration-wrapper::after {
   content: "";
   position: absolute;
-  top: calc(82% - 42.5px); /* Voltando para a posição anterior */
-  right: -100vw; /* Se estende por toda a largura da tela */
-  width: 100vw; /* Ocupa toda a largura da viewport */
-  height: 1.5px; /* Aumentado para 1.5px (meio pixel mais grosso) */
+  top: var(--desk-line-position);
+  right: -100vw;
+  width: 100vw;
+  height: 1.5px;
   background-color: var(--color-text-primary);
-  opacity: 0.8; /* Aumentado para 0.8 (mais escuro) */
+  opacity: 0.8;
   z-index: -1;
 }
 
 .main-illustration-placeholder {
   max-width: 100%;
-  max-height: calc(100vh - var(--header-height) - 100px);
+  max-height: calc(100vh - var(--header-height) - 160px);
   width: auto;
   height: auto;
   display: block;
   margin: 0 auto;
-  transition: filter 0.3s ease; /* Transição suave para os filtros */
+  transition: filter 0.3s ease;
 }
 
 /* Filtros para dark mode na imagem */
@@ -172,34 +168,39 @@ a:hover {
 } */
 
 .hero-tagline {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(2rem, 5.5vw, 3.75rem);
   font-weight: 700;
   color: var(--color-tagline-text);
   text-align: center;
   margin: 0;
-  line-height: 1.2;
-  position: relative; /* Para permitir sobreposição */
-  z-index: 1; /* Para ficar acima das linhas estendidas */
-  margin-top: 10px;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+  max-width: min(92vw, 1100px);
+  width: 100%;
+  margin-bottom: clamp(12px, 2vw, 24px);
 }
 
 /* 
     Ajustes Responsivos
 */
-@media (max-width: 900px) {
-  .hero-tagline {
-    font-size: 1.8em;
-  }
-}
-
 @media (max-width: 768px) {
   .hero-tagline {
-    font-size: 1.5em;
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .main-illustration-placeholder {
+    max-height: calc(100vh - var(--header-height) - 140px);
   }
 }
 
 @media (max-width: 480px) {
   .hero-tagline {
-    font-size: 1.2em;
+    font-size: clamp(1.5rem, 8vw, 2rem);
+    margin-bottom: 10px;
+  }
+
+  .main-illustration-placeholder {
+    max-height: calc(100vh - var(--header-height) - 120px);
   }
 }

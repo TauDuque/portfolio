@@ -7,6 +7,7 @@ const HomePageContent = () => {
 
   return (
     <main className="hero-section">
+      <h1 className="hero-tagline">{t("app_page.hero_tagline")}</h1>
       <div className="illustration-wrapper">
         <img
           src="/assets/images/portada.png"
@@ -14,7 +15,6 @@ const HomePageContent = () => {
           className="main-illustration-placeholder"
         />
       </div>
-      <h1 className="hero-tagline">{t("app_page.hero_tagline")}</h1>
     </main>
   );
 };
