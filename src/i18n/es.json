@@ -10,7 +10,9 @@
         "language_selector": "Idioma",
         "language_portuguese": "Portugués",
         "language_english": "Inglés",
-        "language_spanish": "Español"
+        "language_spanish": "Español",
+        "open_menu": "Abrir menú",
+        "close_menu": "Cerrar menú"
     },
     "app_page": {
         "hero_tagline": "Desarrollador Full Stack",
@@ -24,7 +26,7 @@
         "profile_alt": "Tauan Ribeiro - Desarrollador Full Stack",
         "title": "Tauan Ribeiro: Desarrollador Full Stack JavaScript",
         "subtitle": "Crecimiento Continuo y Resultados Concretos",
-        "paragraph1": "Como Desarrollador Full Stack JavaScript con 5 años de experiencia, me apasiona transformar ideas complejas en aplicaciones web escalables y de alto rendimiento. Mi experiencia abarca el ecosistema JavaScript, con dominio en Node.js, Express.js, React.js y Next.js, y una pasión intrínseca por la resolución de problemas y la creación de soluciones eficientes y elegantes.",
+        "paragraph1": "Como Desarrollador Full Stack JavaScript con 6 años de experiencia, me apasiona transformar ideas complejas en aplicaciones web escalables y de alto rendimiento. Mi experiencia abarca el ecosistema JavaScript, con dominio en Node.js, Express.js, React.js y Next.js, y una pasión intrínseca por la resolución de problemas y la creación de soluciones eficientes y elegantes.",
         "paragraph2": "Mi trayectoria en el mundo de la tecnología está marcada por una exitosa transición de una década de experiencia en Humanidades, incluyendo formación en Letras por la USP, traducción, revisión y enseñanza. Esta base me ha dotado de un valioso conjunto de habilidades: una meticulosa atención al detalle, esencial para la calidad del código y la depuración; una comunicación clara y efectiva, fundamental para la colaboración en equipo y la comprensión de requisitos; y un pensamiento analítico agudo para desentralizar desafíos complejos. Esta trayectoria demuestra mi notable capacidad de aprendizaje continuo, adaptabilidad y resiliencia ante nuevos horizontes.",
         "paragraph3": "Lo que más me motiva en el desarrollo de software es la infinidad de posibilidades que surgen al iniciar un código, al crear una lógica o una función. Me encanta la libertad de explorar diversos enfoques y soluciones creativas para un mismo problema, buscando siempre el camino más optimizado. Soy un gran entusiasta de la comunidad de desarrollo y creo que este es el punto fuerte de nuestra profesión. Valoro mucho la forma en que el conocimiento, las soluciones y los métodos se comparten de manera abierta e irrestricta, y cómo esta dinámica impulsa la evolución de la comunidad en su conjunto, una filosofía que busco replicar en cualquier entorno de trabajo.",
         "paragraph4": "Mi curiosidad me impulsa a explorar las fronteras de la tecnología. Soy un usuario activo de Inteligencia Artificial, que considero un potente multiplicador de productividad y conocimiento, y busco profundizar mis estudios en IA y Machine Learning. Además, sigo con gran interés el universo Blockchain, reconociendo su creciente impacto y su potencial transformador.",
