@@ -87,6 +87,13 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
                 </div>
               </li>
               <li>
+                <i className="fa-brands fa-vuejs"></i>
+                <div>
+                  <strong>{t("skills_page.vue_title")}</strong>
+                  <p>{t("skills_page.vue_description")}</p>
+                </div>
+              </li>
+              <li>
                 <i className="fa-solid fa-layer-group"></i>
                 <div>
                   <strong>{t("skills_page.nextjs_title")}</strong>
@@ -98,6 +105,13 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
                 <div>
                   <strong>{t("skills_page.redux_title")}</strong>
                   <p>{t("skills_page.redux_description")}</p>
+                </div>
+              </li>
+              <li>
+                <i className="fa-solid fa-store"></i>
+                <div>
+                  <strong>{t("skills_page.pinia_title")}</strong>
+                  <p>{t("skills_page.pinia_description")}</p>
                 </div>
               </li>
               <li>
@@ -185,6 +199,13 @@ const HabilidadesFerramentas: React.FC<HabilidadesFerramentasProps> = ({
                 <div>
                   <strong>{t("skills_page.restful_apis_title")}</strong>
                   <p>{t("skills_page.restful_apis_description")}</p>
+                </div>
+              </li>
+              <li>
+                <i className="fa-solid fa-tower-broadcast"></i>
+                <div>
+                  <strong>{t("skills_page.websockets_title")}</strong>
+                  <p>{t("skills_page.websockets_description")}</p>
                 </div>
               </li>
             </ul>
