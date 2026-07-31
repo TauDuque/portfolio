@@ -17,17 +17,18 @@ import HomePageContent from "./pages/HomePageContent"; // <<< NOVO: Importe o co
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem("portfolio_theme") === "dark";
+  });
 
   const toggleMode = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((prev) => !prev);
   };
 
   useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-theme",
-      isDarkMode ? "dark" : "light"
-    );
+    const theme = isDarkMode ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("portfolio_theme", theme);
   }, [isDarkMode]);
 
   return (
