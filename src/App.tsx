@@ -11,6 +11,7 @@ import Projetos from "./pages/Projetos";
 import GaleriaDeArteDetalhes from "./pages/Projetos/galeria-arte-detalhes";
 import ScrollToTop from "./components/ScrollToTop";
 import APIMonitorDetalhes from "./pages/Projetos/api-monitor-detalhes";
+import DutyPilotDetalhes from "./pages/Projetos/duty-pilot-detalhes";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import HomePageContent from "./pages/HomePageContent"; // <<< NOVO: Importe o componente HomePageContent
 import { Analytics } from "@vercel/analytics/react";
@@ -60,6 +61,10 @@ function App() {
           <Route
             path="/projetos/api-monitor"
             element={<APIMonitorDetalhes />}
+          />
+          <Route
+            path="/projetos/duty-pilot"
+            element={<DutyPilotDetalhes />}
           />
         </Routes>
       </LanguageProvider>

@@ -13,7 +13,7 @@ const SobreMim: React.FC = () => {
           {/* Espaço para a foto */}
           <div className="profile-photo-container">
             <img
-              src="/assets/images/lisboa_livraria_1.jpeg" // Substitua por sua foto real
+              src="/assets/images/lisboa_livraria_1.png" // Substitua por sua foto real
               alt={t("about_page.profile_alt")}
               className="profile-photo"
             />

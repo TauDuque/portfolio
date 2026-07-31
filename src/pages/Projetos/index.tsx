@@ -87,7 +87,42 @@ const Projetos = () => {
         </div>
       </section>
 
-      {/* Card do Projeto 3: CurateLink - Em Desenvolvimento */}
+      {/* Card do Projeto 3: Duty Pilot */}
+      <section className="project-card">
+        <div className="project-visual-area">
+          <div className="screenshot-placeholder">
+            <p></p>
+          </div>
+          <img
+            src="/assets/images/duty-pilot-1.png"
+            alt={t("projects_page.duty_pilot_project.screenshot_alt")}
+            style={{objectFit: "fill"}}
+            className="project-screenshot"
+          />
+        </div>
+
+        <div className="project-text-area">
+          <div className="project-title-with-badge">
+            <h2 className="project-title">
+              {t("projects_page.duty_pilot_project.title")}
+            </h2>
+            <span className="status-badge">
+              {t("projects_page.duty_pilot_project.status_badge")}
+            </span>
+          </div>
+          <p className="project-description">
+            {t("projects_page.duty_pilot_project.description")}
+          </p>
+          <p className="project-technologies">
+            {t("projects_page.duty_pilot_project.technologies")}
+          </p>
+          <Link to="/projetos/duty-pilot" className="btn-details">
+            {t("projects_page.duty_pilot_project.details_button")}
+          </Link>
+        </div>
+      </section>
+
+      {/* Card do Projeto 4: CurateLink - Em Desenvolvimento */}
       <section className="project-card project-in-development">
         {/* Área Visual para o Screenshot - AGORA DIRETAMENTE NO CARD */}
         <div className="project-visual-area">
