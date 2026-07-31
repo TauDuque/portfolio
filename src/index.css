@@ -109,9 +109,9 @@ a:hover {
 }
 
 .illustration-wrapper {
-  max-width: 600px; /* Voltando para o tamanho anterior */
-  width: 100%;
-  margin-bottom: 15px; /* Margem de baixo reduzida para menos opacidade */
+  max-width: min(92vw, 1100px);
+  width: fit-content;
+  margin-bottom: 24px;
   position: relative; /* Para posicionar as linhas que se estendem */
 
   /* A imagem em si pode ter preenchimento/bordas internas, 
@@ -150,9 +150,12 @@ a:hover {
 }
 
 .main-illustration-placeholder {
-  max-width: 100%; /* Garante que a imagem seja responsiva */
+  max-width: 100%;
+  max-height: calc(100vh - var(--header-height) - 100px);
+  width: auto;
   height: auto;
-  display: block; /* Remove espaço extra abaixo da imagem */
+  display: block;
+  margin: 0 auto;
   transition: filter 0.3s ease; /* Transição suave para os filtros */
 }
 
@@ -177,7 +180,7 @@ a:hover {
   line-height: 1.2;
   position: relative; /* Para permitir sobreposição */
   z-index: 1; /* Para ficar acima das linhas estendidas */
-  margin-top: -37px; /* Movido mais 2px para cima */
+  margin-top: 10px;
 }
 
 /* 
