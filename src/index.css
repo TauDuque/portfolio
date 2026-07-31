@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
-
 /* 
     Reset CSS & Variáveis Globais
     Usando um reset leve para normalizar os padrões do navegador.
@@ -97,177 +95,6 @@ a:hover {
 }
 
 /* 
-    Estilos do Cabeçalho
-*/
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 var(--spacing-lg);
-  height: var(--header-height);
-  border-bottom: 1.5px solid rgba(74, 85, 104, 0.8); /* Mesma cor e opacidade, mas mais fina */
-  flex-shrink: 0; /* Impede que o cabeçalho encolha em telas pequenas */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.95
-  ); /* Fundo do header no tema claro */
-  transition: all 0.3s ease; /* Transição suave */
-}
-
-/* Header no dark mode */
-[data-theme="dark"] .site-header {
-  background-color: rgba(40, 42, 54, 0.95); /* Fundo do header no tema escuro */
-  border-bottom-color: rgba(
-    98,
-    114,
-    164,
-    0.8
-  ); /* Borda azulada no tema escuro */
-}
-
-/* Logo no dark mode */
-[data-theme="dark"] .site-logo {
-  color: var(--color-text-primary-dark);
-}
-
-/* Navegação no dark mode */
-[data-theme="dark"] .main-nav a {
-  color: var(--color-text-secondary-dark);
-}
-
-[data-theme="dark"] .main-nav a:hover {
-  color: var(--color-accent-dark);
-}
-
-/* Botão de tema no dark mode */
-[data-theme="dark"] .mode-toggle {
-  color: var(--color-text-primary-dark);
-}
-
-[data-theme="dark"] .mode-toggle:hover {
-  background-color: rgba(98, 114, 164, 0.1);
-}
-
-/* Ícones no dark mode */
-[data-theme="dark"] .icon-box {
-  background-color: var(--color-background-secondary-dark);
-  border-color: var(--color-border-dark);
-  color: var(--color-text-primary-dark);
-}
-
-[data-theme="dark"] .icon-box:hover {
-  background-color: var(--color-accent-dark);
-  border-color: var(--color-accent-dark);
-  color: var(--color-background-dark);
-}
-
-.site-logo {
-  font-size: 1.1em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 6rem; /* Aumentado o espaçamento entre as opções */
-  justify-content: center; /* Centraliza as opções */
-  align-items: center;
-}
-
-.main-nav li {
-  margin: 0;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: var(--color-text-primary);
-  font-weight: 500;
-  transition: color 0.3s ease;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-}
-
-.main-nav a:hover {
-  color: var(--color-text-secondary);
-  background-color: rgba(74, 85, 104, 0.1);
-}
-
-/* Efeito de sublinhado para os itens de navegação */
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: currentColor; /* Corresponde à cor atual do link */
-  transition: width 0.3s ease;
-}
-
-.main-nav a:hover::after {
-  width: 100%;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-}
-
-.mode-toggle {
-  background: none;
-  border: none;
-  color: var(--color-text-primary);
-  font-family: var(--font-family-primary);
-  font-size: 0.95em;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm);
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.mode-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.03);
-}
-
-.mode-toggle .icon {
-  font-size: 1.2em; /* Para ícones de emoji */
-}
-
-.header-icons {
-  display: flex;
-  gap: var(--spacing-sm);
-}
-
-.icon-box {
-  width: 32px; /* Tamanho fixo para ícones */
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  background-color: #fff; /* Fundo branco para a caixa do ícone */
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05); /* Sombra sutil */
-  font-size: 1.2em; /* Para ícones de emoji */
-  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
-}
-
-.icon-box:hover {
-  transform: translateY(-2px); /* Leve elevação ao passar o mouse */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
-}
-
-/* 
     Estilos da Seção Hero
 */
 .hero-section {
@@ -353,65 +180,23 @@ a:hover {
   margin-top: -37px; /* Movido mais 2px para cima */
 }
 
-.header-left {
-  font-size: 1.4rem;
-}
-
 /* 
     Ajustes Responsivos
 */
 @media (max-width: 900px) {
-  .site-header {
-    padding: 0 var(--spacing-md);
-  }
-  .main-nav ul {
-    gap: var(--spacing-md);
-  }
   .hero-tagline {
     font-size: 1.8em;
   }
 }
 
 @media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    height: auto; /* Permite que a altura do cabeçalho se ajuste */
-    padding: var(--spacing-md) var(--spacing-sm);
-    gap: var(--spacing-md);
-  }
-
-  .header-left,
-  .main-nav,
-  .header-right {
-    width: 100%;
-    text-align: center;
-    justify-content: center; /* Centraliza os itens dentro de seus contêineres flex */
-    font-size: 2rem;
-  }
-
-  .main-nav ul {
-    justify-content: center;
-    gap: var(--spacing-md);
-  }
-
   .hero-tagline {
     font-size: 1.5em;
   }
 }
 
 @media (max-width: 480px) {
-  .site-logo {
-    font-size: 1em;
-  }
-  .main-nav ul {
-    flex-direction: column; /* Empilha os itens de navegação verticalmente */
-    gap: var(--spacing-sm);
-  }
   .hero-tagline {
     font-size: 1.2em;
-  }
-  .header-icons .icon-box {
-    width: 28px;
-    height: 28px;
   }
 }

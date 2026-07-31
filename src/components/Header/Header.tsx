@@ -65,7 +65,9 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleMode }) => {
 
         <button className="mode-toggle" onClick={toggleMode}>
           <span className="icon">{isDarkMode ? "☀️" : "🌙"}</span>
-          {isDarkMode ? t("header.light_mode") : t("header.dark_mode")}
+          <span className="mode-toggle-label">
+            {isDarkMode ? t("header.light_mode") : t("header.dark_mode")}
+          </span>
         </button>
         <div className="header-icons">
           {/* Ícone do GitHub */}
