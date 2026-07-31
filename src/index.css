@@ -185,25 +185,43 @@ a:hover {
 }
 
 /* 
-    Ajustes Responsivos
+    Ajustes Responsivos — Home
 */
 @media (max-width: 768px) {
+  .hero-section {
+    justify-content: flex-start;
+    padding: 12px 12px 20px;
+    min-height: calc(100dvh - var(--header-height) - 25px);
+  }
+
   .hero-tagline {
-    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    font-size: clamp(1.65rem, 7.5vw, 2.25rem);
+    margin-bottom: 12px;
+    max-width: 96vw;
+  }
+
+  .illustration-wrapper {
+    max-width: 96vw;
+    width: 100%;
   }
 
   .main-illustration-placeholder {
-    max-height: calc(100vh - var(--header-height) - 140px);
+    width: 100%;
+    max-height: none;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-tagline {
-    font-size: clamp(1.5rem, 8vw, 2rem);
-    margin-bottom: 10px;
+  .hero-section {
+    padding: 8px 10px 16px;
   }
 
-  .main-illustration-placeholder {
-    max-height: calc(100vh - var(--header-height) - 120px);
+  .hero-tagline {
+    font-size: clamp(1.45rem, 8.2vw, 1.85rem);
+    margin-bottom: 8px;
+  }
+
+  .illustration-wrapper {
+    max-width: 98vw;
   }
 }
