@@ -49,12 +49,15 @@
 
 html,
 body {
-  height: 100%; /* Garante que o corpo se estenda por toda a altura da viewport */
+  height: 100%;
+}
 
-  padding-top: var(--header-height); /* Adicione esta linha */
+html {
+  padding-top: var(--header-height);
 }
 
 body {
+  padding-top: calc(var(--header-height) - 35px);
   font-family: var(--font-family-primary);
   font-size: var(--font-size-base);
   color: var(--color-text-primary);
